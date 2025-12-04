@@ -1,0 +1,21 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Demonstrates logging with variables and expressions","16","Logging Example - Variable Logging","Tests","Thu Dec 04 09:21:38 UTC 2025","passed","Thu Dec 04 09:21:38 UTC 2025","Logging Example","ProjectA","",""
+"","2010","User","Tests","Thu Dec 04 09:21:40 UTC 2025","failed","Thu Dec 04 09:21:42 UTC 2025","Autowelt","ProjectHUK","",""
+"Demonstrates all available log levels","62","Logging Example - All Log Levels","Tests","Thu Dec 04 09:21:36 UTC 2025","passed","Thu Dec 04 09:21:36 UTC 2025","Logging Example","ProjectA","",""
+"Demonstrates logging in loops with data processing","87","Logging Example - Data Processing Loop","Tests","Thu Dec 04 09:21:37 UTC 2025","passed","Thu Dec 04 09:21:38 UTC 2025","Logging Example","ProjectA","",""
+"","1655","Example Domain Title Data Driven [Default]","","Thu Dec 04 09:21:32 UTC 2025","passed","Thu Dec 04 09:21:34 UTC 2025","Data Driven Example","Tests","",""
+"","1046","High Example (Project A)","Tests","Thu Dec 04 09:21:39 UTC 2025","failed","Thu Dec 04 09:21:40 UTC 2025","highExample","ProjectA","",""
+"Optional, contrast example: calls Playwright Python directly.
+This OPENS ITS OWN Playwright browser and does NOT share
+state with the Browser library. Use only for gaps.","3","Playwright Direct Example - H1 Text And PDF (Chromium)","Tests","Thu Dec 04 09:21:38 UTC 2025","skipped","Thu Dec 04 09:21:38 UTC 2025","PlaywrightExample","ProjectA","",""
+"Demonstrates logging throughout a browser test","431","Logging Example - Browser Test With Logging","Tests","Thu Dec 04 09:21:37 UTC 2025","passed","Thu Dec 04 09:21:37 UTC 2025","Logging Example","ProjectA","",""
+"","151","Wrapper Click Demo (Project A)","Tests","Thu Dec 04 09:21:35 UTC 2025","failed","Thu Dec 04 09:21:35 UTC 2025","Example","ProjectA","",""
+"","6","Check Detection Only","","Thu Dec 04 09:21:32 UTC 2025","failed","Thu Dec 04 09:21:32 UTC 2025","Home","Tests","",""
+"","582","Example Domain Title Data Driven [Localized]","","Thu Dec 04 09:21:34 UTC 2025","passed","Thu Dec 04 09:21:34 UTC 2025","Data Driven Example","Tests","",""
+"","1783","User Can Submit Vehicle Data Successfully","Tests","Thu Dec 04 09:21:45 UTC 2025","passed","Thu Dec 04 09:21:47 UTC 2025","Test","ProjectHUK","",""
+"Demonstrates logging in error scenarios","28","Logging Example - Error Handling","Tests","Thu Dec 04 09:21:37 UTC 2025","passed","Thu Dec 04 09:21:37 UTC 2025","Logging Example","ProjectA","",""
+"Recommended pattern: call Playwright through Browser keywords.
+""Evaluate JavaScript"" maps to Playwright's page.evaluate
+or locator.evaluate — but we stay inside the SAME session.","258","Playwright Via Browser - Evaluate JS (Same Session)","Tests","Thu Dec 04 09:21:37 UTC 2025","passed","Thu Dec 04 09:21:38 UTC 2025","PlaywrightExample","ProjectA","",""
+"","3191","Open Page in new Tab","Tests","Thu Dec 04 09:21:41 UTC 2025","failed","Thu Dec 04 09:21:44 UTC 2025","Home","ProjectHUK","",""
+"","404","Example Domain Title Data Driven [Caps]","","Thu Dec 04 09:21:34 UTC 2025","passed","Thu Dec 04 09:21:35 UTC 2025","Data Driven Example","Tests","",""
