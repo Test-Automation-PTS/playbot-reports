@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"Gleicher fachlicher Flow wie der High-Level-Demo-Test, aber nur mit Low-Level-Keywords.
-Die Keywords kommen direct von Browser Library. No wrapping Action-Keywords.","7666","HUK Autowelt LowKeys Demo","Tests","Fri Dec 19 13:33:59 UTC 2025","passed","Fri Dec 19 13:34:07 UTC 2025","HUK noRouting","ProjectHUK","",""
-"Gleicher fachlicher Flow wie der High-Level-Demo-Test, aber nur mit Low-Level-Keywords (Keys.* + Answer Question).","6607","HUK Autowelt LowKeys Demo","Tests","Fri Dec 19 13:33:59 UTC 2025","passed","Fri Dec 19 13:34:05 UTC 2025","AutoWelt LowKeys","ProjectHUK","",""
