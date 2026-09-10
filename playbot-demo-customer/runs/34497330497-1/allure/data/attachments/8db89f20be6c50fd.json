@@ -1,0 +1,35 @@
+{
+  "equal": false,
+  "difference_count": 2,
+  "affected_pages": [
+    1,
+    2
+  ],
+  "pages_compared": [
+    1,
+    2
+  ],
+  "limit_reached": false,
+  "differences": [
+    {
+      "page": 1,
+      "score": 10520,
+      "reason": "pixels_changed",
+      "artifacts": {
+        "expected": "page_1_expected.png",
+        "actual": "page_1_actual.png",
+        "diff": "page_1_diff.png"
+      }
+    },
+    {
+      "page": 2,
+      "score": 71393,
+      "reason": "pixels_changed",
+      "artifacts": {
+        "expected": "page_2_expected.png",
+        "actual": "page_2_actual.png",
+        "diff": "page_2_diff.png"
+      }
+    }
+  ]
+}

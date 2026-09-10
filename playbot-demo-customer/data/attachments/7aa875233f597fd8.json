@@ -1,0 +1,77 @@
+{
+  "id": "translated-legacy-masks-work-with-the-visual-engine-7a5c37ed",
+  "name": "Translated Legacy Masks Work With The Visual Engine",
+  "full_name": "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf",
+    "mask": "mask.json"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Translation preserves mask compatibility; candidate and reference still have unmasked differences.",
+  "duration_seconds": 0.803,
+  "comparison": {
+    "equal": false,
+    "difference_count": 2,
+    "affected_pages": [
+      1,
+      2
+    ],
+    "pages_compared": [
+      1,
+      2
+    ],
+    "limit_reached": false,
+    "differences": [
+      {
+        "page": 1,
+        "score": 10520,
+        "reason": "pixels_changed",
+        "artifacts": {
+          "expected": "page_1_expected.png",
+          "actual": "page_1_actual.png",
+          "diff": "page_1_diff.png"
+        }
+      },
+      {
+        "page": 2,
+        "score": 71393,
+        "reason": "pixels_changed",
+        "artifacts": {
+          "expected": "page_2_expected.png",
+          "actual": "page_2_actual.png",
+          "diff": "page_2_diff.png"
+        }
+      }
+    ]
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf",
+    "mask.json",
+    "page_1_actual.png",
+    "page_1_diff.png",
+    "page_1_expected.png",
+    "page_2_actual.png",
+    "page_2_diff.png",
+    "page_2_expected.png"
+  ]
+}

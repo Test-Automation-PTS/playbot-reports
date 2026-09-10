@@ -1,0 +1,58 @@
+{
+  "id": "changed-text-produces-a-readable-difference-abd1ab89",
+  "name": "Changed Text Produces A Readable Difference",
+  "full_name": "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference",
+  "category": "Text",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "The name and date differ. Catch the expected failure and show the HTML/JSON evidence.",
+  "duration_seconds": 0.059,
+  "comparison": {
+    "equal": false,
+    "difference_count": 2,
+    "affected_pages": [
+      1,
+      2
+    ],
+    "pages_compared": [
+      1,
+      2
+    ],
+    "limit_reached": false,
+    "differences": {
+      "1": {
+        "expected": "Customer Alice Example\nIssued 01.01.2026\nTotal 42.00 EUR",
+        "actual": "Customer Bob Example\nIssued 02.01.2026\nTotal 42.00 EUR"
+      },
+      "2": {
+        "expected": "",
+        "actual": "Additional page content"
+      }
+    }
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff.html",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf"
+  ]
+}

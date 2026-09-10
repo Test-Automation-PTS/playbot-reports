@@ -1,0 +1,18 @@
+{
+  "equal": false,
+  "difference_count": 1,
+  "affected_pages": [
+    2
+  ],
+  "pages_compared": [
+    1,
+    2
+  ],
+  "limit_reached": false,
+  "differences": {
+    "2": {
+      "expected": null,
+      "actual": ""
+    }
+  }
+}
