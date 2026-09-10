@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "path": "/unavailable",
+  "request_body": null,
+  "status": 503,
+  "content_type": "application/json",
+  "response_body": "{\"error\":\"temporarily_unavailable\"}"
+}

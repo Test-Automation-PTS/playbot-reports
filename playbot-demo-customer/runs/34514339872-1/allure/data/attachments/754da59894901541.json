@@ -1,0 +1,47 @@
+{
+  "id": "configured-page-and-text-masks-ignore-dynamic-fields-f202f864",
+  "name": "Configured Page And Text Masks Ignore Dynamic Fields",
+  "full_name": "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields",
+  "category": "Text",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf",
+    "mask": "mask.json"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "The same documents pass when explicitly configured dynamic fields are masked.",
+  "duration_seconds": 0.02,
+  "comparison": {
+    "equal": true,
+    "difference_count": 0,
+    "affected_pages": [],
+    "pages_compared": [
+      1
+    ],
+    "limit_reached": false,
+    "differences": {}
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff.html",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf",
+    "mask.json"
+  ]
+}
