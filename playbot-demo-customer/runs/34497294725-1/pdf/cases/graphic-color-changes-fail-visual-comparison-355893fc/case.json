@@ -1,0 +1,156 @@
+{
+  "id": "graphic-color-changes-fail-visual-comparison-355893fc",
+  "name": "Graphic Color Changes Fail Visual Comparison",
+  "full_name": "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png"
+    ],
+    "actual": [
+      "actual-page-1.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "A red rectangle becomes blue while text stays identical. Expect a pixel difference.",
+  "duration_seconds": 0.031568,
+  "comparison": {
+    "equal": false,
+    "difference_count": 1,
+    "affected_pages": [
+      1
+    ],
+    "pages_compared": [
+      1
+    ],
+    "limit_reached": false,
+    "differences": [
+      {
+        "page": 1,
+        "score": 12544,
+        "reason": "pixels_changed",
+        "artifacts": {
+          "expected": "page_1_expected.png",
+          "actual": "page_1_actual.png",
+          "diff": "page_1_diff.png"
+        }
+      }
+    ]
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual.pdf",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected.pdf",
+    "page_1_actual.png",
+    "page_1_diff.png",
+    "page_1_expected.png"
+  ],
+  "suite": "PDF Examples.Visual Comparison",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.000786,
+      "arguments": [
+        "Visual"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/graphic-color-changes-fail-visual-comparison-355893fc"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.003535,
+      "arguments": [
+        "${DATA}/graphic-red.pdf",
+        "${DATA}/graphic-blue.pdf"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Run Keyword And Expect Error",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.023571,
+      "arguments": [
+        "PDFs differ visually*",
+        "PDFs Should Be Visually Equal",
+        "${DATA}/graphic-red.pdf",
+        "${DATA}/graphic-blue.pdf",
+        "output_dir=${PDF_OUTPUT}"
+      ],
+      "messages": [],
+      "steps": [
+        {
+          "name": "PDFs Should Be Visually Equal",
+          "kind": "KEYWORD",
+          "status": "FAIL",
+          "duration_seconds": 0.022883,
+          "arguments": [
+            "${DATA}/graphic-red.pdf",
+            "${DATA}/graphic-blue.pdf",
+            "output_dir=${PDF_OUTPUT}"
+          ],
+          "messages": [
+            {
+              "level": "FAIL",
+              "text": "PDFs differ visually on pages: 1; artifacts: /workspace/reports/pdf/pdf-artifacts/graphic-color-changes-fail-visual-comparison-355893fc"
+            }
+          ],
+          "steps": []
+        }
+      ]
+    },
+    {
+      "name": "File Should Exist",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000208,
+      "arguments": [
+        "${PDF_OUTPUT}/page_1_diff.png"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "File '<a href=\"file:///workspace/reports/pdf/pdf-artifacts/graphic-color-changes-fail-visual-comparison-355893fc/page_1_diff.png\">/workspace/reports/pdf/pdf-artifacts/graphic-color-changes-fail-visual-comparison-355893fc/page_1_diff.png</a>' exists."
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.001593,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-09-10T15:43:28.480822",
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.031568,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#graphic-color-changes-fail-visual-comparison-355893fc"
+    }
+  ]
+}

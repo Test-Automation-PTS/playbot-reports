@@ -1,0 +1,141 @@
+{
+  "id": "difference-limit-stops-after-one-affected-page-182e9e28",
+  "name": "Difference Limit Stops After One Affected Page",
+  "full_name": "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page",
+  "category": "Text",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {
+    "max_differences": "1"
+  },
+  "status": "PASS",
+  "message": "",
+  "documentation": "Stop after one differing page; the report records that the comparison limit was reached.",
+  "duration_seconds": 0.018806,
+  "comparison": {
+    "equal": false,
+    "difference_count": 1,
+    "affected_pages": [
+      1
+    ],
+    "pages_compared": [
+      1
+    ],
+    "limit_reached": true,
+    "differences": {
+      "1": {
+        "expected": "Customer Alice Example\nIssued 01.01.2026\nTotal 42.00 EUR",
+        "actual": "Customer Bob Example\nIssued 02.01.2026\nTotal 42.00 EUR"
+      }
+    }
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff.html",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf"
+  ],
+  "suite": "PDF Examples.Text Comparison",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.000835,
+      "arguments": [
+        "Text"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/difference-limit-stops-after-one-affected-page-182e9e28"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.008558,
+      "arguments": [
+        "${DATA}/expected.pdf",
+        "${DATA}/actual.pdf",
+        "max_differences=1"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Compare PDF Texts",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.005624,
+      "arguments": [
+        "${DATA}/expected.pdf",
+        "${DATA}/actual.pdf",
+        "max_differences=1",
+        "output_dir=${PDF_OUTPUT}"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${diff} = {1: {'expected': 'Customer Alice Example\\nIssued 01.01.2026\\nTotal 42.00 EUR', 'actual': 'Customer Bob Example\\nIssued 02.01.2026\\nTotal 42.00 EUR'}}"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Length Should Be",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000338,
+      "arguments": [
+        "${diff}",
+        "1"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Length is 1."
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.00162,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-09-10T15:43:28.455731",
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.018806,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#difference-limit-stops-after-one-affected-page-182e9e28"
+    }
+  ]
+}

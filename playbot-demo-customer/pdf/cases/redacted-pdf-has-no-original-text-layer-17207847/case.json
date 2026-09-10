@@ -1,0 +1,145 @@
+{
+  "id": "redacted-pdf-has-no-original-text-layer-17207847",
+  "name": "Redacted PDF Has No Original Text Layer",
+  "full_name": "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer",
+  "category": "Redaction",
+  "inputs": {
+    "expected": "expected.pdf",
+    "mask": "mask.json"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "redacted": [
+      "redacted-page-1.png",
+      "redacted-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Export a raster PDF and verify the original searchable text is absent. Preview the output in the dashboard.",
+  "duration_seconds": 0.10554,
+  "comparison": null,
+  "files": [
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf",
+    "mask.json",
+    "redacted-page-1.png",
+    "redacted-page-2.png",
+    "redacted.pdf"
+  ],
+  "suite": "PDF Examples.Redaction",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.00117,
+      "arguments": [
+        "Redaction"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/redacted-pdf-has-no-original-text-layer-17207847"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.006858,
+      "arguments": [
+        "${DATA}/expected.pdf",
+        "mask=${DATA}/redaction.json"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Redact PDF",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.025379,
+      "arguments": [
+        "${DATA}/expected.pdf",
+        "${PDF_OUTPUT}/redacted.pdf",
+        "${DATA}/redaction.json"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${output} = /workspace/reports/pdf/pdf-artifacts/redacted-pdf-has-no-original-text-layer-17207847/redacted.pdf"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Evaluate",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.058989,
+      "arguments": [
+        "__import__('pypdf').PdfReader($output).pages[0].extract_text()"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${text} = "
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Should Be Empty",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000491,
+      "arguments": [
+        "${text}"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Length is 0."
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.01021,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-09-10T15:43:28.229429",
+  "mask_config": [
+    {
+      "page_numbers": [
+        1
+      ],
+      "text_ignore_patterns": [
+        "Customer [ANY] Example"
+      ]
+    }
+  ],
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.10554,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#redacted-pdf-has-no-original-text-layer-17207847"
+    }
+  ]
+}

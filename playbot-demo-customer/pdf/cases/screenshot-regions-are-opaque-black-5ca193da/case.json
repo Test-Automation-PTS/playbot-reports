@@ -1,0 +1,125 @@
+{
+  "id": "screenshot-regions-are-opaque-black-5ca193da",
+  "name": "Screenshot Regions Are Opaque Black",
+  "full_name": "PDF Examples.Redaction.Screenshot Regions Are Opaque Black",
+  "category": "Redaction",
+  "inputs": {
+    "expected": "expected.png",
+    "mask": "mask.json"
+  },
+  "previews": {},
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Export a PNG with an opaque black region and inspect a pixel inside that region.",
+  "duration_seconds": 0.009741,
+  "comparison": null,
+  "files": [
+    "expected.png",
+    "mask.json",
+    "redacted.png"
+  ],
+  "suite": "PDF Examples.Redaction",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.00085,
+      "arguments": [
+        "Redaction"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/screenshot-regions-are-opaque-black-5ca193da"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000411,
+      "arguments": [
+        "${DATA}/screenshot.png",
+        "mask=${DATA}/screenshot-mask.json"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Redact Image",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.004364,
+      "arguments": [
+        "${DATA}/screenshot.png",
+        "${PDF_OUTPUT}/redacted.png",
+        "${DATA}/screenshot-mask.json"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${output} = /workspace/reports/pdf/pdf-artifacts/screenshot-regions-are-opaque-black-5ca193da/redacted.png"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Evaluate",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000662,
+      "arguments": [
+        "__import__('PIL.Image', fromlist=['open']).open($output).getpixel((25,25))"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${pixel} = (0, 0, 0)"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Should Be Equal",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000478,
+      "arguments": [
+        "${pixel}",
+        "${{(0,0,0)}}"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.000986,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-09-10T15:43:28.217766",
+  "mask_config": [
+    {
+      "area_masks": [
+        "[AREA: 0%, 0%, 50%, 100%]"
+      ]
+    }
+  ],
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.009741,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#screenshot-regions-are-opaque-black-5ca193da"
+    }
+  ]
+}

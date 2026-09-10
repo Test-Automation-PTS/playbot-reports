@@ -1,0 +1,54 @@
+{
+  "id": "difference-limit-stops-after-one-affected-page-182e9e28",
+  "name": "Difference Limit Stops After One Affected Page",
+  "full_name": "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page",
+  "category": "Text",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {
+    "max_differences": "1"
+  },
+  "status": "PASS",
+  "message": "",
+  "documentation": "Stop after one differing page; the report records that the comparison limit was reached.",
+  "duration_seconds": 0.016,
+  "comparison": {
+    "equal": false,
+    "difference_count": 1,
+    "affected_pages": [
+      1
+    ],
+    "pages_compared": [
+      1
+    ],
+    "limit_reached": true,
+    "differences": {
+      "1": {
+        "expected": "Customer Alice Example\nIssued 01.01.2026\nTotal 42.00 EUR",
+        "actual": "Customer Bob Example\nIssued 02.01.2026\nTotal 42.00 EUR"
+      }
+    }
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff.html",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf"
+  ]
+}

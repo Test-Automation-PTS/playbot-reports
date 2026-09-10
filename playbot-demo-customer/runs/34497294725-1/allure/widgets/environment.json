@@ -1,0 +1,1 @@
+[{"values":["0.4.0"],"name":"Playbot.version"},{"values":["sha256:a62f249c046fe9a6f54995e29ee1ea3df6e4d148df7ded55cfc2d90dfc7a4edc"],"name":"Playbot.image.digest"},{"values":["871aa804e76fa002a291b55021286d57e430111d"],"name":"Customer.commit"},{"values":["main"],"name":"Customer.branch"},{"values":["34497294725"],"name":"GitHub.run"}]

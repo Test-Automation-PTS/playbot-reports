@@ -1,0 +1,129 @@
+{
+  "id": "configured-masks-ignore-dynamic-text-and-graphics-63e7c514",
+  "name": "Configured Masks Ignore Dynamic Text And Graphics",
+  "full_name": "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf",
+    "mask": "mask.json"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Shared text and area masks intentionally exclude dynamic content before pixel comparison.",
+  "duration_seconds": 0.019887,
+  "comparison": {
+    "equal": true,
+    "difference_count": 0,
+    "affected_pages": [],
+    "pages_compared": [
+      1
+    ],
+    "limit_reached": false,
+    "differences": []
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf",
+    "mask.json"
+  ],
+  "suite": "PDF Examples.Visual Comparison",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.000769,
+      "arguments": [
+        "Visual"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/configured-masks-ignore-dynamic-text-and-graphics-63e7c514"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.00871,
+      "arguments": [
+        "${DATA}/expected.pdf",
+        "${DATA}/actual.pdf",
+        "mask=${DATA}/masks.json"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "PDFs Should Be Visually Equal",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.007127,
+      "arguments": [
+        "${DATA}/expected.pdf",
+        "${DATA}/actual.pdf",
+        "mask_json=${DATA}/masks.json",
+        "output_dir=${PDF_OUTPUT}"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.001827,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-09-10T15:43:28.514097",
+  "mask_config": {
+    "compare_pages": "1",
+    "masks": [
+      {
+        "page_numbers": [
+          1
+        ],
+        "description": "Customer name, issue date and the top-right status block are dynamic.",
+        "text_ignore_patterns": [
+          "Customer [ANY] Example",
+          "Issued [DATE]"
+        ],
+        "area_masks": [
+          "[TOP-RIGHT: 25%, 20%]"
+        ]
+      }
+    ]
+  },
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.019887,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#configured-masks-ignore-dynamic-text-and-graphics-63e7c514"
+    }
+  ]
+}

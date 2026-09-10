@@ -1,0 +1,139 @@
+{
+  "id": "malformed-masks-fail-clearly-cdc07bc3",
+  "name": "Malformed Masks Fail Clearly",
+  "full_name": "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {
+    "invalid_area": "110 percent"
+  },
+  "status": "PASS",
+  "message": "",
+  "documentation": "Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced.",
+  "duration_seconds": 0.015089,
+  "comparison": null,
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf"
+  ],
+  "suite": "PDF Examples.Visual Comparison",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.000821,
+      "arguments": [
+        "Visual"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/malformed-masks-fail-clearly-cdc07bc3"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.008682,
+      "arguments": [
+        "${DATA}/expected.pdf",
+        "${DATA}/actual.pdf",
+        "invalid_area=110 percent"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Evaluate",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000368,
+      "arguments": [
+        "[{\"area_masks\":[\"[TOP-RIGHT: 110%, 10%]\"]}]"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${masks} = [{'area_masks': ['[TOP-RIGHT: 110%, 10%]']}]"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Run Keyword And Expect Error",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.001834,
+      "arguments": [
+        "*area coordinates*",
+        "Compare Pdfs",
+        "${DATA}/expected.pdf",
+        "${DATA}/actual.pdf",
+        "${masks}",
+        "${PDF_OUTPUT}"
+      ],
+      "messages": [],
+      "steps": [
+        {
+          "name": "Compare Pdfs",
+          "kind": "KEYWORD",
+          "status": "FAIL",
+          "duration_seconds": 0.001061,
+          "arguments": [
+            "${DATA}/expected.pdf",
+            "${DATA}/actual.pdf",
+            "${masks}",
+            "${PDF_OUTPUT}"
+          ],
+          "messages": [
+            {
+              "level": "FAIL",
+              "text": "PdfConfigError: area coordinates require non-negative x/y and positive width/height"
+            }
+          ],
+          "steps": []
+        }
+      ]
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.001438,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-09-10T15:43:28.572442",
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.015089,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#malformed-masks-fail-clearly-cdc07bc3"
+    }
+  ]
+}

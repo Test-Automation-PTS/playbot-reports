@@ -1,0 +1,59 @@
+{
+  "id": "additional-blank-page-fails-visual-comparison-2cfe4782",
+  "name": "Additional Blank Page Fails Visual Comparison",
+  "full_name": "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "A missing page is reported even when its pixel canvas would be blank.",
+  "duration_seconds": 0.032,
+  "comparison": {
+    "equal": false,
+    "difference_count": 1,
+    "affected_pages": [
+      2
+    ],
+    "pages_compared": [
+      1,
+      2
+    ],
+    "limit_reached": false,
+    "differences": [
+      {
+        "page": 2,
+        "score": 0,
+        "reason": "missing_page",
+        "artifacts": {
+          "expected": "page_2_expected.png",
+          "actual": "page_2_actual.png",
+          "diff": "page_2_diff.png"
+        }
+      }
+    ]
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected.pdf",
+    "page_2_actual.png",
+    "page_2_diff.png",
+    "page_2_expected.png"
+  ]
+}

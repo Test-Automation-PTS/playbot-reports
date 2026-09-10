@@ -1,0 +1,17 @@
+{
+  "equal": false,
+  "difference_count": 1,
+  "affected_pages": [
+    1
+  ],
+  "pages_compared": [
+    1
+  ],
+  "limit_reached": true,
+  "differences": {
+    "1": {
+      "expected": "Customer Alice Example\nIssued 01.01.2026\nTotal 42.00 EUR",
+      "actual": "Customer Bob Example\nIssued 02.01.2026\nTotal 42.00 EUR"
+    }
+  }
+}

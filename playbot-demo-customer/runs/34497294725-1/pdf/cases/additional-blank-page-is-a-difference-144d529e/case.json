@@ -1,0 +1,151 @@
+{
+  "id": "additional-blank-page-is-a-difference-144d529e",
+  "name": "Additional Blank Page Is A Difference",
+  "full_name": "PDF Examples.Text Comparison.Additional Blank Page Is A Difference",
+  "category": "Text",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "A second blank page is still a structural difference; detecting it is the expected outcome.",
+  "duration_seconds": 0.013262,
+  "comparison": {
+    "equal": false,
+    "difference_count": 1,
+    "affected_pages": [
+      2
+    ],
+    "pages_compared": [
+      1,
+      2
+    ],
+    "limit_reached": false,
+    "differences": {
+      "2": {
+        "expected": null,
+        "actual": ""
+      }
+    }
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff.html",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected.pdf"
+  ],
+  "suite": "PDF Examples.Text Comparison",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.000784,
+      "arguments": [
+        "Text"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/additional-blank-page-is-a-difference-144d529e"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.005659,
+      "arguments": [
+        "${DATA}/one-page.pdf",
+        "${DATA}/two-pages.pdf"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Run Keyword And Expect Error",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.003391,
+      "arguments": [
+        "PDF texts differ on pages: 2",
+        "PDF Texts Should Be Equal",
+        "${DATA}/one-page.pdf",
+        "${DATA}/two-pages.pdf",
+        "output_dir=${PDF_OUTPUT}"
+      ],
+      "messages": [],
+      "steps": [
+        {
+          "name": "PDF Texts Should Be Equal",
+          "kind": "KEYWORD",
+          "status": "FAIL",
+          "duration_seconds": 0.002727,
+          "arguments": [
+            "${DATA}/one-page.pdf",
+            "${DATA}/two-pages.pdf",
+            "output_dir=${PDF_OUTPUT}"
+          ],
+          "messages": [
+            {
+              "level": "FAIL",
+              "text": "PDF texts differ on pages: 2"
+            }
+          ],
+          "steps": []
+        }
+      ]
+    },
+    {
+      "name": "File Should Exist",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000198,
+      "arguments": [
+        "${PDF_OUTPUT}/diff_result.json"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "File '<a href=\"file:///workspace/reports/pdf/pdf-artifacts/additional-blank-page-is-a-difference-144d529e/diff_result.json\">/workspace/reports/pdf/pdf-artifacts/additional-blank-page-is-a-difference-144d529e/diff_result.json</a>' exists."
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.001474,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-09-10T15:43:28.428211",
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.013262,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#additional-blank-page-is-a-difference-144d529e"
+    }
+  ]
+}

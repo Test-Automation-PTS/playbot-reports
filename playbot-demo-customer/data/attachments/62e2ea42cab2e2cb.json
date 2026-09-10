@@ -1,0 +1,42 @@
+[
+  {
+    "type": "word_pattern",
+    "page": "1",
+    "pattern": "(?:(?:[$€£]|PLN|USD|EUR|GBP|zł)\\s?\\d+(?:[.,]\\d+)*|\\d+(?:[.,]\\d+)*\\s?(?:[$€£]|PLN|USD|EUR|GBP|zł))"
+  },
+  {
+    "type": "word_pattern",
+    "page": "2",
+    "pattern": "(?:(?:[$€£]|PLN|USD|EUR|GBP|zł)\\s?\\d+(?:[.,]\\d+)*|\\d+(?:[.,]\\d+)*\\s?(?:[$€£]|PLN|USD|EUR|GBP|zł))"
+  },
+  {
+    "type": "word_pattern",
+    "page": "1",
+    "pattern": "Document"
+  },
+  {
+    "type": "word_pattern",
+    "page": "2",
+    "pattern": "Document"
+  },
+  {
+    "type": "word_pattern",
+    "page": "1",
+    "pattern": "Policy\\w+"
+  },
+  {
+    "type": "word_pattern",
+    "page": "2",
+    "pattern": "Policy\\w+"
+  },
+  {
+    "type": "word_pattern",
+    "page": "2",
+    "pattern": "grace\\ period"
+  },
+  {
+    "type": "word_pattern",
+    "page": "2",
+    "pattern": "poli\\w+"
+  }
+]
