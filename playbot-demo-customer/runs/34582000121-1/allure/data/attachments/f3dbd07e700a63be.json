@@ -1,0 +1,15 @@
+{
+  "id": "an-unknown-booking-cannot-produce-a-pdf-1ea32b6d",
+  "name": "An Unknown Booking Cannot Produce A PDF",
+  "full_name": "Business Journey.Workshop Booking.An Unknown Booking Cannot Produce A PDF",
+  "category": "Integrated booking",
+  "inputs": {},
+  "previews": {},
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "A customer asks for a confirmation using an invented identifier. The service must return a documented JSON 404 and no database row may exist. PASS means the invalid request was correctly rejected; it does not represent a produced PDF.",
+  "duration_seconds": 0.066,
+  "comparison": null,
+  "files": []
+}

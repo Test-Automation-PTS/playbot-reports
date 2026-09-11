@@ -1,0 +1,11 @@
+{
+  "compare_pages": "1",
+  "masks": [
+    {
+      "page_numbers": [1],
+      "description": "Customer name, issue date and the top-right status block are dynamic.",
+      "text_ignore_patterns": ["Customer [ANY] Example", "Issued [DATE]"],
+      "area_masks": ["[TOP-RIGHT: 25%, 20%]"]
+    }
+  ]
+}

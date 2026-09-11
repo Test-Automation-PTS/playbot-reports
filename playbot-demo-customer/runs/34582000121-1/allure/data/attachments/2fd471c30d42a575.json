@@ -1,0 +1,36 @@
+{
+  "id": "malformed-masks-fail-clearly-cdc07bc3",
+  "name": "Malformed Masks Fail Clearly",
+  "full_name": "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {
+    "invalid_area": "110 percent"
+  },
+  "status": "PASS",
+  "message": "",
+  "documentation": "Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced.",
+  "duration_seconds": 0.013,
+  "comparison": null,
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf"
+  ]
+}

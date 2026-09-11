@@ -1,0 +1,42 @@
+{
+  "id": "alice-gets-the-same-confirmed-booking-in-every-channel-92229615",
+  "name": "Alice Gets The Same Confirmed Booking In Every Channel",
+  "full_name": "Business Journey.Workshop Booking.Alice Gets The Same Confirmed Booking In Every Channel",
+  "category": "Integrated booking",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png"
+    ],
+    "actual": [
+      "actual-page-1.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Preparation supplies an empty local application, a private PostgreSQL table and a fresh browser. Alice signs in and books API Testing for EUR 49.90. We check the GUI booking ID, the API's JSON, a separate database query and the downloaded PDF against approved fixtures. All channels must describe WB-1001 consistently.",
+  "duration_seconds": 2.086,
+  "comparison": {
+    "equal": true,
+    "difference_count": 0,
+    "affected_pages": [],
+    "pages_compared": [
+      1
+    ],
+    "limit_reached": false,
+    "differences": {}
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual.pdf",
+    "diff.html",
+    "diff_result.json",
+    "downloaded-confirmation.pdf",
+    "expected-page-1.png",
+    "expected.pdf"
+  ]
+}

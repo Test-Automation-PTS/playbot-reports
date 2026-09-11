@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "path": "/api/bookings/WB-DOES-NOT-EXIST/confirmation.pdf",
+  "request_body": null,
+  "status": 404,
+  "content_type": "application/json",
+  "response_body": "{\"error\": \"booking_not_found\"}"
+}
