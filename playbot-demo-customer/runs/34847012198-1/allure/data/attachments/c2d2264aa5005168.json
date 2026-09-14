@@ -1,0 +1,8 @@
+{
+  "method": "POST",
+  "path": "/soap/order",
+  "request_body": "<Envelope xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\"><Body><GetOrder><id>42</id></GetOrder></Body></Envelope>",
+  "status": 200,
+  "content_type": "text/xml",
+  "response_body": "<Envelope xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\"><Body><Order><id>42</id><status>ready</status></Order></Body></Envelope>"
+}

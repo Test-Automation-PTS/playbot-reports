@@ -1,0 +1,23 @@
+{
+  "equal": false,
+  "difference_count": 1,
+  "affected_pages": [
+    1
+  ],
+  "pages_compared": [
+    1
+  ],
+  "limit_reached": false,
+  "differences": [
+    {
+      "page": 1,
+      "score": 12544,
+      "reason": "pixels_changed",
+      "artifacts": {
+        "expected": "page_1_expected.png",
+        "actual": "page_1_actual.png",
+        "diff": "page_1_diff.png"
+      }
+    }
+  ]
+}

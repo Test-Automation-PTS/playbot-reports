@@ -1,0 +1,22 @@
+{
+  "id": "screenshot-regions-are-opaque-black-5ca193da",
+  "name": "Screenshot Regions Are Opaque Black",
+  "full_name": "PDF Examples.Redaction.Screenshot Regions Are Opaque Black",
+  "category": "Redaction",
+  "inputs": {
+    "expected": "expected.png",
+    "mask": "mask.json"
+  },
+  "previews": {},
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a PNG with an opaque black region and inspect a pixel inside that region.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Visual-/Reporting-Runtime und beschreibbare Eingabe-/Ausgabepfade f\u00fcr die Schw\u00e4rzung bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Kundenbild, tats\u00e4chliche Schw\u00e4rzungsmaske und neue Ausgabedatei bestimmen.\n\n4. Einen Pr\u00fcfpunkt innerhalb der eigenen Region w\u00e4hlen; (25,25) und RGB (0,0,0) geh\u00f6ren zum Demo-Nachweis.",
+  "duration_seconds": 0.01,
+  "comparison": null,
+  "files": [
+    "expected.png",
+    "mask.json",
+    "redacted.png"
+  ]
+}

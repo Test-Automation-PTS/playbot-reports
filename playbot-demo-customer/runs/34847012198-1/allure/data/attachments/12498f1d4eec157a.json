@@ -1,0 +1,15 @@
+{
+  "id": "http-404-json-and-sql-verify-a-missing-pdf-record-205ce399",
+  "name": "HTTP 404 JSON And SQL Verify A Missing PDF Record",
+  "full_name": "Integration Examples.Workshop Booking.HTTP 404 JSON And SQL Verify A Missing PDF Record",
+  "category": "Integrated booking",
+  "inputs": {},
+  "previews": {},
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Start the PostgreSQL Compose service. Suite setup starts the local GUI/API with its own database table; test setup opens a fresh Chromium context and PDF evidence directory. Approved JSON/PDF fixtures are in robot/data/integration.\nSteps and expected result: GET the PDF endpoint for WB-DOES-NOT-EXIST. Require HTTP 404, booking_not_found JSON and an empty independent SQL query. PASS means the missing-record response was detected; this case produces no PDF.\n\n\nKundenvorbereitung (siehe robot/tests/integration/README.md):\n\n1. Browser-, API-, SQL- und PDF-Runtime sowie zusammengeh\u00f6rige Zug\u00e4nge zur Kunden-Testumgebung bereitstellen.\n\n2. Lokale Workshop-App/Tabellenerzeugung im Fixture ersetzen; Kunden-Locators, API-Pfade und SQL-Schema zuordnen.\n\n3. Eine garantiert nicht vorhandene Kunden-ID und den zugeh\u00f6rigen PDF-Downloadpfad bestimmen.\n\n4. Dokumentierten HTTP-/JSON-Fehler und unabh\u00e4ngige leere SQL-Abfrage festlegen; es darf kein Beleg erzeugt werden.",
+  "duration_seconds": 0.044,
+  "comparison": null,
+  "files": []
+}

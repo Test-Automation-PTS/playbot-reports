@@ -18,8 +18,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A red rectangle becomes blue while text stays identical. Expect a pixel difference.",
-  "duration_seconds": 0.03688,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A red rectangle becomes blue while text stays identical. Expect a pixel difference.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Zwei gleich gerenderte Kundenbelege mit identischem Text und gezielt abweichender Grafik bereitstellen.\n\n4. Betroffene Seite und erwarteten Pixel-Diff festlegen; die Demo \u00e4ndert ein rotes Rechteck in blau.",
+  "duration_seconds": 0.02714,
   "comparison": {
     "equal": false,
     "difference_count": 1,
@@ -59,7 +59,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000955,
+      "duration_seconds": 0.000687,
       "arguments": [
         "Visual"
       ],
@@ -75,7 +75,7 @@
       "name": "Log",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000261,
+      "duration_seconds": 0.000243,
       "arguments": [
         "Steps and expected result: A red rectangle becomes blue while text stays identical. Expect a pixel difference."
       ],
@@ -91,7 +91,7 @@
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.004612,
+      "duration_seconds": 0.003423,
       "arguments": [
         "${DATA}/graphic-red.pdf",
         "${DATA}/graphic-blue.pdf"
@@ -103,7 +103,7 @@
       "name": "Run Keyword And Expect Error",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.025762,
+      "duration_seconds": 0.019481,
       "arguments": [
         "PDFs differ visually*",
         "PDFs Should Be Visually Equal",
@@ -117,7 +117,7 @@
           "name": "PDFs Should Be Visually Equal",
           "kind": "KEYWORD",
           "status": "FAIL",
-          "duration_seconds": 0.025025,
+          "duration_seconds": 0.0189,
           "arguments": [
             "${DATA}/graphic-red.pdf",
             "${DATA}/graphic-blue.pdf",
@@ -137,7 +137,7 @@
       "name": "File Should Exist",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000281,
+      "duration_seconds": 0.000188,
       "arguments": [
         "${PDF_OUTPUT}/page_1_diff.png"
       ],
@@ -153,13 +153,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.002597,
+      "duration_seconds": 0.001345,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-14T10:41:00.732006",
+  "started_at": "2026-09-14T13:09:48.170866",
   "evidence_missing": false,
   "history": [
     {
@@ -191,6 +191,12 @@
       "duration_seconds": 0.03688,
       "run_number": 54,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#graphic-color-changes-fail-visual-comparison-355893fc"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.02714,
+      "run_number": 59,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#graphic-color-changes-fail-visual-comparison-355893fc"
     }
   ]
 }

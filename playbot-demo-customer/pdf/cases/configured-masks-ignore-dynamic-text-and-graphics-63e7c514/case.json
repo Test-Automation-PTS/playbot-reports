@@ -21,8 +21,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Shared text and area masks intentionally exclude dynamic content before pixel comparison.",
-  "duration_seconds": 0.023217,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Shared text and area masks intentionally exclude dynamic content before pixel comparison.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Kundenspezifische Text-/Fl\u00e4chenmasken im korrekten Seitenbezug erstellen.\n\n4. Dokumente mit ausschlie\u00dflich erlaubten dynamischen Abweichungen w\u00e4hlen und unverdeckte relevante Bereiche erhalten.",
+  "duration_seconds": 0.018705,
   "comparison": {
     "equal": true,
     "difference_count": 0,
@@ -49,7 +49,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000989,
+      "duration_seconds": 0.000702,
       "arguments": [
         "Visual"
       ],
@@ -65,7 +65,7 @@
       "name": "Log",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000307,
+      "duration_seconds": 0.000237,
       "arguments": [
         "Steps and expected result: Shared text and area masks intentionally exclude dynamic content before pixel comparison."
       ],
@@ -81,7 +81,7 @@
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.010183,
+      "duration_seconds": 0.007851,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf",
@@ -94,7 +94,7 @@
       "name": "PDFs Should Be Visually Equal",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.007077,
+      "duration_seconds": 0.006804,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf",
@@ -108,13 +108,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.00253,
+      "duration_seconds": 0.001351,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-14T10:41:00.770947",
+  "started_at": "2026-09-14T13:09:48.199512",
   "mask_config": {
     "compare_pages": "1",
     "masks": [
@@ -164,6 +164,12 @@
       "duration_seconds": 0.023217,
       "run_number": 54,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#configured-masks-ignore-dynamic-text-and-graphics-63e7c514"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.018705,
+      "run_number": 59,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#configured-masks-ignore-dynamic-text-and-graphics-63e7c514"
     }
   ]
 }

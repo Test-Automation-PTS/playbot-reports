@@ -22,8 +22,8 @@
   },
   "status": "PASS",
   "message": "",
-  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Stop after one differing page; the report records that the comparison limit was reached.",
-  "duration_seconds": 0.023516,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Stop after one differing page; the report records that the comparison limit was reached.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. PDFs mit bekannten Textabweichungen und eine gew\u00fcnschte Abbruchgrenze vorbereiten.\n\n4. Ergebnis auf die untersuchten Seiten beziehen; nach Erreichen der Grenze sind \u00fcbrige Seiten nicht als gleich belegt.",
+  "duration_seconds": 0.016309,
   "comparison": {
     "equal": false,
     "difference_count": 1,
@@ -57,7 +57,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000925,
+      "duration_seconds": 0.000667,
       "arguments": [
         "Text"
       ],
@@ -73,7 +73,7 @@
       "name": "Log",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000292,
+      "duration_seconds": 0.000213,
       "arguments": [
         "Steps and expected result: Stop after one differing page; the report records that the comparison limit was reached."
       ],
@@ -89,7 +89,7 @@
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.009623,
+      "duration_seconds": 0.007238,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf",
@@ -102,7 +102,7 @@
       "name": "Compare PDF Texts",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.007149,
+      "duration_seconds": 0.004859,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf",
@@ -121,7 +121,7 @@
       "name": "Length Should Be",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000472,
+      "duration_seconds": 0.000291,
       "arguments": [
         "${diff}",
         "1"
@@ -138,13 +138,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.002673,
+      "duration_seconds": 0.001253,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-14T10:41:00.700113",
+  "started_at": "2026-09-14T13:09:48.149029",
   "evidence_missing": false,
   "history": [
     {
@@ -176,6 +176,12 @@
       "duration_seconds": 0.023516,
       "run_number": 54,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#difference-limit-stops-after-one-affected-page-182e9e28"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.016309,
+      "run_number": 59,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#difference-limit-stops-after-one-affected-page-182e9e28"
     }
   ]
 }

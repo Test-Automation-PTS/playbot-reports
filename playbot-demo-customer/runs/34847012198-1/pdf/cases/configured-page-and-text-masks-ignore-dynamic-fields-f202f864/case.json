@@ -1,0 +1,176 @@
+{
+  "id": "configured-page-and-text-masks-ignore-dynamic-fields-f202f864",
+  "name": "Configured Page And Text Masks Ignore Dynamic Fields",
+  "full_name": "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields",
+  "category": "Text",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf",
+    "mask": "mask.json"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The same documents pass when explicitly configured dynamic fields are masked.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Dynamische Kundenfelder und zul\u00e4ssige Seiten-/Textmasken anhand realer Dokumente bestimmen.\n\n4. PDFs w\u00e4hlen, die ausschlie\u00dflich in diesen erlaubten Bereichen abweichen; Maskenformat und Seitenbezug pr\u00fcfen.",
+  "duration_seconds": 0.017889,
+  "comparison": {
+    "equal": true,
+    "difference_count": 0,
+    "affected_pages": [],
+    "pages_compared": [
+      1
+    ],
+    "limit_reached": false,
+    "differences": {}
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff.html",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf",
+    "mask.json"
+  ],
+  "suite": "PDF Examples.Text Comparison",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.000732,
+      "arguments": [
+        "Text"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000247,
+      "arguments": [
+        "Steps and expected result: The same documents pass when explicitly configured dynamic fields are masked."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: The same documents pass when explicitly configured dynamic fields are masked."
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.007798,
+      "arguments": [
+        "${DATA}/expected.pdf",
+        "${DATA}/actual.pdf",
+        "mask=${DATA}/masks.json"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "PDF Texts Should Be Equal",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.005933,
+      "arguments": [
+        "${DATA}/expected.pdf",
+        "${DATA}/actual.pdf",
+        "mask_config=${DATA}/masks.json",
+        "output_dir=${PDF_OUTPUT}"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.001448,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-09-14T13:09:48.104941",
+  "mask_config": {
+    "compare_pages": "1",
+    "masks": [
+      {
+        "page_numbers": [
+          1
+        ],
+        "description": "Customer name, issue date and the top-right status block are dynamic.",
+        "text_ignore_patterns": [
+          "Customer [ANY] Example",
+          "Issued [DATE]"
+        ],
+        "area_masks": [
+          "[TOP-RIGHT: 25%, 20%]"
+        ]
+      }
+    ]
+  },
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.019203,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.023116,
+      "run_number": 40,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497330497-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.024256,
+      "run_number": 43,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34514339872-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.021777,
+      "run_number": 48,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.024569,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.017889,
+      "run_number": 59,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+    }
+  ]
+}

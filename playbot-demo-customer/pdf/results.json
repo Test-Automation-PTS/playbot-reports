@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-14T10:41:14+00:00",
-  "commit": "37b32536b2b6ec05febf9df51b4b6ab3db53b5c9",
+  "generated_at": "2026-09-14T13:09:59+00:00",
+  "commit": "bd35a2c19d36bc017bd75a030299d1d82afd8ca7",
   "version": "0.6.1",
   "digest": "sha256:c84adf0b97c74361a6b6d40110b0e2291e63e6b94bc4773669cdcaf27d15dab6",
-  "run_url": "https://github.com/Test-Automation-PTS/playbot-demo-customer/actions/runs/34834043676",
+  "run_url": "https://github.com/Test-Automation-PTS/playbot-demo-customer/actions/runs/34847012198",
   "allure_url": "https://test-automation-pts.github.io/playbot-demo-reports/allure/",
   "timeline_url": "https://test-automation-pts.github.io/playbot-demo-reports/pdf/history.json",
   "cases": [
@@ -30,8 +30,8 @@
       "settings": {},
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Translation preserves mask compatibility; candidate and reference still have unmasked differences.",
-      "duration_seconds": 0.875864,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Translation preserves mask compatibility; candidate and reference still have unmasked differences.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Visual-/Reporting-Runtime und die vorhandene Legacy-Maskenkonfiguration f\u00fcr die \u00dcbersetzung bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Vorhandene Legacy-Maskendatei des Kunden und dazu passende Vergleichsbelege bereitstellen.\n\n4. \u00dcbersetzte Masken an bekannten Regionen pr\u00fcfen und f\u00fcr diesen Negativfall mindestens eine unmaskierte Abweichung erhalten.",
+      "duration_seconds": 0.669826,
       "comparison": {
         "equal": false,
         "difference_count": 2,
@@ -89,7 +89,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.001233,
+          "duration_seconds": 0.000911,
           "arguments": [
             "Visual"
           ],
@@ -105,7 +105,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000326,
+          "duration_seconds": 0.000291,
           "arguments": [
             "Steps and expected result: Translation preserves mask compatibility; candidate and reference still have unmasked differences."
           ],
@@ -121,7 +121,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.179722,
+          "duration_seconds": 0.133328,
           "arguments": [
             "${DATA}/Candidate.pdf",
             "${DATA}/Reference.pdf",
@@ -134,7 +134,7 @@
           "name": "Translate Config File For Visual Comparison",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.001844,
+          "duration_seconds": 0.001383,
           "arguments": [
             "${DATA}/visual_mask_conf.json",
             "${PDF_OUTPUT}"
@@ -151,7 +151,7 @@
           "name": "Compare Pdfs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.677918,
+          "duration_seconds": 0.52325,
           "arguments": [
             "${DATA}/Candidate.pdf",
             "${DATA}/Reference.pdf",
@@ -170,7 +170,7 @@
           "name": "Should Not Be Empty",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000584,
+          "duration_seconds": 0.000512,
           "arguments": [
             "${diffs}"
           ],
@@ -186,13 +186,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.009095,
+          "duration_seconds": 0.00619,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:40:59.414316",
+      "started_at": "2026-09-14T13:09:47.148222",
       "mask_config": [
         {
           "type": "word_pattern",
@@ -266,6 +266,12 @@
           "duration_seconds": 0.875864,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.669826,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
         }
       ]
     },
@@ -282,8 +288,8 @@
       "settings": {},
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a PNG with an opaque black region and inspect a pixel inside that region.",
-      "duration_seconds": 0.01528,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a PNG with an opaque black region and inspect a pixel inside that region.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Visual-/Reporting-Runtime und beschreibbare Eingabe-/Ausgabepfade f\u00fcr die Schw\u00e4rzung bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Kundenbild, tats\u00e4chliche Schw\u00e4rzungsmaske und neue Ausgabedatei bestimmen.\n\n4. Einen Pr\u00fcfpunkt innerhalb der eigenen Region w\u00e4hlen; (25,25) und RGB (0,0,0) geh\u00f6ren zum Demo-Nachweis.",
+      "duration_seconds": 0.012484,
       "comparison": null,
       "files": [
         "expected.png",
@@ -296,7 +302,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.001023,
+          "duration_seconds": 0.000758,
           "arguments": [
             "Redaction"
           ],
@@ -312,7 +318,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000305,
+          "duration_seconds": 0.000283,
           "arguments": [
             "Steps and expected result: Export a PNG with an opaque black region and inspect a pixel inside that region."
           ],
@@ -328,7 +334,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000954,
+          "duration_seconds": 0.000823,
           "arguments": [
             "${DATA}/screenshot.png",
             "mask=${DATA}/screenshot-mask.json"
@@ -340,7 +346,7 @@
           "name": "Redact Image",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.00745,
+          "duration_seconds": 0.006455,
           "arguments": [
             "${DATA}/screenshot.png",
             "${PDF_OUTPUT}/redacted.png",
@@ -358,7 +364,7 @@
           "name": "Evaluate",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000759,
+          "duration_seconds": 0.000675,
           "arguments": [
             "__import__('PIL.Image', fromlist=['open']).open($output).getpixel((25,25))"
           ],
@@ -374,7 +380,7 @@
           "name": "Should Be Equal",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000527,
+          "duration_seconds": 0.00047,
           "arguments": [
             "${pixel}",
             "${{(0,0,0)}}"
@@ -386,13 +392,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.001612,
+          "duration_seconds": 0.000994,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.296953",
+      "started_at": "2026-09-14T13:09:47.823294",
       "mask_config": [
         {
           "area_masks": [
@@ -431,6 +437,12 @@
           "duration_seconds": 0.01528,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#screenshot-regions-are-opaque-black-5ca193da"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.012484,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#screenshot-regions-are-opaque-black-5ca193da"
         }
       ]
     },
@@ -456,8 +468,8 @@
       "settings": {},
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a raster PDF and verify the original searchable text is absent. Preview the output in the dashboard.",
-      "duration_seconds": 0.214464,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a raster PDF and verify the original searchable text is absent. Preview the output in the dashboard.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Visual-/Reporting-Runtime und beschreibbare Eingabe-/Ausgabepfade f\u00fcr die Schw\u00e4rzung bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Kunden-PDF mit nachweisbarer Textebene und passende Schw\u00e4rzungsregionen bereitstellen.\n\n4. Festlegen, ob gerasterte Ausgabe ohne urspr\u00fcngliche Textebene f\u00fcr diesen Pr\u00fcfzweck gew\u00fcnscht ist.",
+      "duration_seconds": 0.182187,
       "comparison": null,
       "files": [
         "expected-page-1.png",
@@ -474,7 +486,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.000944,
+          "duration_seconds": 0.000685,
           "arguments": [
             "Redaction"
           ],
@@ -490,7 +502,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000366,
+          "duration_seconds": 0.000238,
           "arguments": [
             "Steps and expected result: Export a raster PDF and verify the original searchable text is absent. Preview the output in the dashboard."
           ],
@@ -506,7 +518,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.037404,
+          "duration_seconds": 0.033208,
           "arguments": [
             "${DATA}/expected.pdf",
             "mask=${DATA}/redaction.json"
@@ -518,7 +530,7 @@
           "name": "Redact PDF",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.045265,
+          "duration_seconds": 0.039026,
           "arguments": [
             "${DATA}/expected.pdf",
             "${PDF_OUTPUT}/redacted.pdf",
@@ -536,7 +548,7 @@
           "name": "Evaluate",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.110336,
+          "duration_seconds": 0.094923,
           "arguments": [
             "__import__('pypdf').PdfReader($output).pages[0].extract_text()"
           ],
@@ -552,7 +564,7 @@
           "name": "Should Be Empty",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000561,
+          "duration_seconds": 0.000438,
           "arguments": [
             "${text}"
           ],
@@ -568,13 +580,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.016325,
+          "duration_seconds": 0.011507,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.314448",
+      "started_at": "2026-09-14T13:09:47.837329",
       "mask_config": [
         {
           "page_numbers": [
@@ -616,6 +628,12 @@
           "duration_seconds": 0.214464,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#redacted-pdf-has-no-original-text-layer-17207847"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.182187,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#redacted-pdf-has-no-original-text-layer-17207847"
         }
       ]
     },
@@ -641,8 +659,8 @@
       "settings": {},
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The name and date differ. Catch the expected failure and show the HTML/JSON evidence.",
-      "duration_seconds": 0.086497,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The name and date differ. Catch the expected failure and show the HTML/JSON evidence.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. PDFs mit extrahierbarem Text und einer gezielten \u00c4nderung in einem relevanten Kundenfeld w\u00e4hlen.\n\n4. Erwartete betroffene Seiten und HTML-Diff festlegen; Beispielname und Datum sind Demo-Unterschiede.",
+      "duration_seconds": 0.06852,
       "comparison": {
         "equal": false,
         "difference_count": 2,
@@ -682,7 +700,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.000887,
+          "duration_seconds": 0.00073,
           "arguments": [
             "Text"
           ],
@@ -698,7 +716,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000269,
+          "duration_seconds": 0.000225,
           "arguments": [
             "Steps and expected result: The name and date differ. Catch the expected failure and show the HTML/JSON evidence."
           ],
@@ -714,7 +732,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.01089,
+          "duration_seconds": 0.007756,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf"
@@ -726,7 +744,7 @@
           "name": "Run Keyword And Expect Error",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.068887,
+          "duration_seconds": 0.056197,
           "arguments": [
             "PDF texts differ on pages:*",
             "PDF Texts Should Be Equal",
@@ -740,7 +758,7 @@
               "name": "PDF Texts Should Be Equal",
               "kind": "KEYWORD",
               "status": "FAIL",
-              "duration_seconds": 0.06799,
+              "duration_seconds": 0.055524,
               "arguments": [
                 "${DATA}/expected.pdf",
                 "${DATA}/actual.pdf",
@@ -760,7 +778,7 @@
           "name": "File Should Exist",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.00038,
+          "duration_seconds": 0.000291,
           "arguments": [
             "${PDF_OUTPUT}/diff.html"
           ],
@@ -776,13 +794,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.002661,
+          "duration_seconds": 0.001379,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.550336",
+      "started_at": "2026-09-14T13:09:48.034908",
       "evidence_missing": false,
       "history": [
         {
@@ -814,6 +832,12 @@
           "duration_seconds": 0.086497,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#changed-text-produces-a-readable-difference-abd1ab89"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.06852,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#changed-text-produces-a-readable-difference-abd1ab89"
         }
       ]
     },
@@ -840,8 +864,8 @@
       "settings": {},
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The same documents pass when explicitly configured dynamic fields are masked.",
-      "duration_seconds": 0.024569,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The same documents pass when explicitly configured dynamic fields are masked.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Dynamische Kundenfelder und zul\u00e4ssige Seiten-/Textmasken anhand realer Dokumente bestimmen.\n\n4. PDFs w\u00e4hlen, die ausschlie\u00dflich in diesen erlaubten Bereichen abweichen; Maskenformat und Seitenbezug pr\u00fcfen.",
+      "duration_seconds": 0.017889,
       "comparison": {
         "equal": true,
         "difference_count": 0,
@@ -869,7 +893,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.000978,
+          "duration_seconds": 0.000732,
           "arguments": [
             "Text"
           ],
@@ -885,7 +909,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.00028,
+          "duration_seconds": 0.000247,
           "arguments": [
             "Steps and expected result: The same documents pass when explicitly configured dynamic fields are masked."
           ],
@@ -901,7 +925,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.010146,
+          "duration_seconds": 0.007798,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf",
@@ -914,7 +938,7 @@
           "name": "PDF Texts Should Be Equal",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.008216,
+          "duration_seconds": 0.005933,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf",
@@ -928,13 +952,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.002804,
+          "duration_seconds": 0.001448,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.638938",
+      "started_at": "2026-09-14T13:09:48.104941",
       "mask_config": {
         "compare_pages": "1",
         "masks": [
@@ -984,6 +1008,12 @@
           "duration_seconds": 0.024569,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.017889,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
         }
       ]
     },
@@ -1008,8 +1038,8 @@
       "settings": {},
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A second blank page is still a structural difference; detecting it is the expected outcome.",
-      "duration_seconds": 0.016101,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A second blank page is still a structural difference; detecting it is the expected outcome.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Zwei PDFs mit identischem Inhalt, aber genau einer zus\u00e4tzlichen leeren Originalseite vorbereiten.\n\n4. Die tats\u00e4chlich zus\u00e4tzliche Seitennummer als erwarteten Strukturfehler festlegen; Seite 2 ist hier das Beispiel.",
+      "duration_seconds": 0.011437,
       "comparison": {
         "equal": false,
         "difference_count": 1,
@@ -1043,7 +1073,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.001007,
+          "duration_seconds": 0.000668,
           "arguments": [
             "Text"
           ],
@@ -1059,7 +1089,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000285,
+          "duration_seconds": 0.000256,
           "arguments": [
             "Steps and expected result: A second blank page is still a structural difference; detecting it is the expected outcome."
           ],
@@ -1075,7 +1105,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.006074,
+          "duration_seconds": 0.004363,
           "arguments": [
             "${DATA}/one-page.pdf",
             "${DATA}/two-pages.pdf"
@@ -1087,7 +1117,7 @@
           "name": "Run Keyword And Expect Error",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.00407,
+          "duration_seconds": 0.002886,
           "arguments": [
             "PDF texts differ on pages: 2",
             "PDF Texts Should Be Equal",
@@ -1101,7 +1131,7 @@
               "name": "PDF Texts Should Be Equal",
               "kind": "KEYWORD",
               "status": "FAIL",
-              "duration_seconds": 0.003369,
+              "duration_seconds": 0.002314,
               "arguments": [
                 "${DATA}/one-page.pdf",
                 "${DATA}/two-pages.pdf",
@@ -1121,7 +1151,7 @@
           "name": "File Should Exist",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000226,
+          "duration_seconds": 0.000208,
           "arguments": [
             "${PDF_OUTPUT}/diff_result.json"
           ],
@@ -1137,13 +1167,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.002234,
+          "duration_seconds": 0.001263,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.665604",
+      "started_at": "2026-09-14T13:09:48.124471",
       "evidence_missing": false,
       "history": [
         {
@@ -1175,6 +1205,12 @@
           "duration_seconds": 0.016101,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#additional-blank-page-is-a-difference-144d529e"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.011437,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#additional-blank-page-is-a-difference-144d529e"
         }
       ]
     },
@@ -1201,8 +1237,8 @@
       },
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Compare the same unequal page counts, explicitly excluding original page 2.",
-      "duration_seconds": 0.014405,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Compare the same unequal page counts, explicitly excluding original page 2.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Eine fachlich ausdr\u00fccklich ausgeschlossene Originalseite und zwei sonst passende Belege bereitstellen.\n\n4. Dieselbe Seitenauswahl in Evidence und Vergleich \u00fcbergeben; die \u00fcbrigen Seiten m\u00fcssen weiter pr\u00fcfbar bleiben.",
+      "duration_seconds": 0.010013,
       "comparison": {
         "equal": true,
         "difference_count": 0,
@@ -1228,7 +1264,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.000931,
+          "duration_seconds": 0.000691,
           "arguments": [
             "Text"
           ],
@@ -1244,7 +1280,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000265,
+          "duration_seconds": 0.000228,
           "arguments": [
             "Steps and expected result: Compare the same unequal page counts, explicitly excluding original page 2."
           ],
@@ -1260,7 +1296,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.005866,
+          "duration_seconds": 0.004208,
           "arguments": [
             "${DATA}/one-page.pdf",
             "${DATA}/two-pages.pdf",
@@ -1273,7 +1309,7 @@
           "name": "PDF Texts Should Be Equal",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.002909,
+          "duration_seconds": 0.001977,
           "arguments": [
             "${DATA}/one-page.pdf",
             "${DATA}/two-pages.pdf",
@@ -1287,13 +1323,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.002457,
+          "duration_seconds": 0.001185,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.683698",
+      "started_at": "2026-09-14T13:09:48.137552",
       "evidence_missing": false,
       "history": [
         {
@@ -1325,6 +1361,12 @@
           "duration_seconds": 0.014405,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#excluded-page-does-not-affect-equality-86e764f6"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.010013,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#excluded-page-does-not-affect-equality-86e764f6"
         }
       ]
     },
@@ -1352,8 +1394,8 @@
       },
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Stop after one differing page; the report records that the comparison limit was reached.",
-      "duration_seconds": 0.023516,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Stop after one differing page; the report records that the comparison limit was reached.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. PDFs mit bekannten Textabweichungen und eine gew\u00fcnschte Abbruchgrenze vorbereiten.\n\n4. Ergebnis auf die untersuchten Seiten beziehen; nach Erreichen der Grenze sind \u00fcbrige Seiten nicht als gleich belegt.",
+      "duration_seconds": 0.016309,
       "comparison": {
         "equal": false,
         "difference_count": 1,
@@ -1387,7 +1429,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.000925,
+          "duration_seconds": 0.000667,
           "arguments": [
             "Text"
           ],
@@ -1403,7 +1445,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000292,
+          "duration_seconds": 0.000213,
           "arguments": [
             "Steps and expected result: Stop after one differing page; the report records that the comparison limit was reached."
           ],
@@ -1419,7 +1461,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.009623,
+          "duration_seconds": 0.007238,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf",
@@ -1432,7 +1474,7 @@
           "name": "Compare PDF Texts",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.007149,
+          "duration_seconds": 0.004859,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf",
@@ -1451,7 +1493,7 @@
           "name": "Length Should Be",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000472,
+          "duration_seconds": 0.000291,
           "arguments": [
             "${diff}",
             "1"
@@ -1468,13 +1510,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.002673,
+          "duration_seconds": 0.001253,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.700113",
+      "started_at": "2026-09-14T13:09:48.149029",
       "evidence_missing": false,
       "history": [
         {
@@ -1506,6 +1548,12 @@
           "duration_seconds": 0.023516,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#difference-limit-stops-after-one-affected-page-182e9e28"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.016309,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#difference-limit-stops-after-one-affected-page-182e9e28"
         }
       ]
     },
@@ -1529,8 +1577,8 @@
       "settings": {},
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A red rectangle becomes blue while text stays identical. Expect a pixel difference.",
-      "duration_seconds": 0.03688,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A red rectangle becomes blue while text stays identical. Expect a pixel difference.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Zwei gleich gerenderte Kundenbelege mit identischem Text und gezielt abweichender Grafik bereitstellen.\n\n4. Betroffene Seite und erwarteten Pixel-Diff festlegen; die Demo \u00e4ndert ein rotes Rechteck in blau.",
+      "duration_seconds": 0.02714,
       "comparison": {
         "equal": false,
         "difference_count": 1,
@@ -1570,7 +1618,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.000955,
+          "duration_seconds": 0.000687,
           "arguments": [
             "Visual"
           ],
@@ -1586,7 +1634,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000261,
+          "duration_seconds": 0.000243,
           "arguments": [
             "Steps and expected result: A red rectangle becomes blue while text stays identical. Expect a pixel difference."
           ],
@@ -1602,7 +1650,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.004612,
+          "duration_seconds": 0.003423,
           "arguments": [
             "${DATA}/graphic-red.pdf",
             "${DATA}/graphic-blue.pdf"
@@ -1614,7 +1662,7 @@
           "name": "Run Keyword And Expect Error",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.025762,
+          "duration_seconds": 0.019481,
           "arguments": [
             "PDFs differ visually*",
             "PDFs Should Be Visually Equal",
@@ -1628,7 +1676,7 @@
               "name": "PDFs Should Be Visually Equal",
               "kind": "KEYWORD",
               "status": "FAIL",
-              "duration_seconds": 0.025025,
+              "duration_seconds": 0.0189,
               "arguments": [
                 "${DATA}/graphic-red.pdf",
                 "${DATA}/graphic-blue.pdf",
@@ -1648,7 +1696,7 @@
           "name": "File Should Exist",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000281,
+          "duration_seconds": 0.000188,
           "arguments": [
             "${PDF_OUTPUT}/page_1_diff.png"
           ],
@@ -1664,13 +1712,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.002597,
+          "duration_seconds": 0.001345,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.732006",
+      "started_at": "2026-09-14T13:09:48.170866",
       "evidence_missing": false,
       "history": [
         {
@@ -1702,6 +1750,12 @@
           "duration_seconds": 0.03688,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#graphic-color-changes-fail-visual-comparison-355893fc"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.02714,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#graphic-color-changes-fail-visual-comparison-355893fc"
         }
       ]
     },
@@ -1728,8 +1782,8 @@
       "settings": {},
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Shared text and area masks intentionally exclude dynamic content before pixel comparison.",
-      "duration_seconds": 0.023217,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Shared text and area masks intentionally exclude dynamic content before pixel comparison.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Kundenspezifische Text-/Fl\u00e4chenmasken im korrekten Seitenbezug erstellen.\n\n4. Dokumente mit ausschlie\u00dflich erlaubten dynamischen Abweichungen w\u00e4hlen und unverdeckte relevante Bereiche erhalten.",
+      "duration_seconds": 0.018705,
       "comparison": {
         "equal": true,
         "difference_count": 0,
@@ -1756,7 +1810,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.000989,
+          "duration_seconds": 0.000702,
           "arguments": [
             "Visual"
           ],
@@ -1772,7 +1826,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000307,
+          "duration_seconds": 0.000237,
           "arguments": [
             "Steps and expected result: Shared text and area masks intentionally exclude dynamic content before pixel comparison."
           ],
@@ -1788,7 +1842,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.010183,
+          "duration_seconds": 0.007851,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf",
@@ -1801,7 +1855,7 @@
           "name": "PDFs Should Be Visually Equal",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.007077,
+          "duration_seconds": 0.006804,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf",
@@ -1815,13 +1869,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.00253,
+          "duration_seconds": 0.001351,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.770947",
+      "started_at": "2026-09-14T13:09:48.199512",
       "mask_config": {
         "compare_pages": "1",
         "masks": [
@@ -1871,6 +1925,12 @@
           "duration_seconds": 0.023217,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#configured-masks-ignore-dynamic-text-and-graphics-63e7c514"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.018705,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#configured-masks-ignore-dynamic-text-and-graphics-63e7c514"
         }
       ]
     },
@@ -1895,8 +1955,8 @@
       "settings": {},
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A missing page is reported even when its pixel canvas would be blank.",
-      "duration_seconds": 0.039191,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A missing page is reported even when its pixel canvas would be blank.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Zwei PDFs mit gezielt unterschiedlicher Seitenanzahl bereitstellen.\n\n4. Fehlende Originalseite als erwarteten Fehler festlegen, auch wenn deren Bildinhalt vollst\u00e4ndig leer ist.",
+      "duration_seconds": 0.028552,
       "comparison": {
         "equal": false,
         "difference_count": 1,
@@ -1938,7 +1998,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.000981,
+          "duration_seconds": 0.000669,
           "arguments": [
             "Visual"
           ],
@@ -1954,7 +2014,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000291,
+          "duration_seconds": 0.000211,
           "arguments": [
             "Steps and expected result: A missing page is reported even when its pixel canvas would be blank."
           ],
@@ -1970,7 +2030,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.005445,
+          "duration_seconds": 0.003834,
           "arguments": [
             "${DATA}/one-page.pdf",
             "${DATA}/two-pages.pdf"
@@ -1982,7 +2042,7 @@
           "name": "Run Keyword And Expect Error",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.02747,
+          "duration_seconds": 0.020781,
           "arguments": [
             "PDFs differ visually on pages: 2*",
             "PDFs Should Be Visually Equal",
@@ -1996,7 +2056,7 @@
               "name": "PDFs Should Be Visually Equal",
               "kind": "KEYWORD",
               "status": "FAIL",
-              "duration_seconds": 0.026692,
+              "duration_seconds": 0.02021,
               "arguments": [
                 "${DATA}/one-page.pdf",
                 "${DATA}/two-pages.pdf",
@@ -2016,13 +2076,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.002744,
+          "duration_seconds": 0.0015,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.796394",
+      "started_at": "2026-09-14T13:09:48.219867",
       "evidence_missing": false,
       "history": [
         {
@@ -2054,6 +2114,12 @@
           "duration_seconds": 0.039191,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.028552,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
         }
       ]
     },
@@ -2081,8 +2147,8 @@
       },
       "status": "PASS",
       "message": "",
-      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced.",
-      "duration_seconds": 0.018174,
+      "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Eine g\u00fcltige Kunden-Maskenkonfiguration kopieren und kontrolliert eine Prozentkoordinate au\u00dferhalb 0 bis 100 setzen.\n\n4. Die Konfigurationsablehnung erwarten; dieser Fall trifft keine Aussage \u00fcber Dokumentgleichheit.",
+      "duration_seconds": 0.012895,
       "comparison": null,
       "files": [
         "actual-page-1.png",
@@ -2098,7 +2164,7 @@
           "name": "Prepare Pdf Evidence",
           "kind": "SETUP",
           "status": "PASS",
-          "duration_seconds": 0.001064,
+          "duration_seconds": 0.000663,
           "arguments": [
             "Visual"
           ],
@@ -2114,7 +2180,7 @@
           "name": "Log",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000303,
+          "duration_seconds": 0.000213,
           "arguments": [
             "Steps and expected result: Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced."
           ],
@@ -2130,7 +2196,7 @@
           "name": "Pdf Inputs",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.009926,
+          "duration_seconds": 0.007272,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf",
@@ -2143,7 +2209,7 @@
           "name": "Evaluate",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.000386,
+          "duration_seconds": 0.000308,
           "arguments": [
             "[{\"area_masks\":[\"[TOP-RIGHT: 110%, 10%]\"]}]"
           ],
@@ -2159,7 +2225,7 @@
           "name": "Run Keyword And Expect Error",
           "kind": "KEYWORD",
           "status": "PASS",
-          "duration_seconds": 0.001919,
+          "duration_seconds": 0.001585,
           "arguments": [
             "*area coordinates*",
             "Compare Pdfs",
@@ -2174,7 +2240,7 @@
               "name": "Compare Pdfs",
               "kind": "KEYWORD",
               "status": "FAIL",
-              "duration_seconds": 0.001024,
+              "duration_seconds": 0.000894,
               "arguments": [
                 "${DATA}/expected.pdf",
                 "${DATA}/actual.pdf",
@@ -2195,13 +2261,13 @@
           "name": "Finish Pdf Evidence",
           "kind": "TEARDOWN",
           "status": "PASS",
-          "duration_seconds": 0.002174,
+          "duration_seconds": 0.001061,
           "arguments": [],
           "messages": [],
           "steps": []
         }
       ],
-      "started_at": "2026-09-14T10:41:00.837710",
+      "started_at": "2026-09-14T13:09:48.249923",
       "evidence_missing": false,
       "history": [
         {
@@ -2233,6 +2299,12 @@
           "duration_seconds": 0.018174,
           "run_number": 54,
           "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#malformed-masks-fail-clearly-cdc07bc3"
+        },
+        {
+          "status": "PASS",
+          "duration_seconds": 0.012895,
+          "run_number": 59,
+          "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#malformed-masks-fail-clearly-cdc07bc3"
         }
       ]
     }
@@ -2542,7 +2614,68 @@
           "duration_seconds": 0.018174
         }
       }
+    },
+    {
+      "run_key": "34847012198-1",
+      "run_number": 59,
+      "generated_at": "2026-09-14T13:09:59+00:00",
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/",
+      "counts": {
+        "PASS": 12,
+        "FAIL": 0,
+        "SKIP": 0
+      },
+      "tests": {
+        "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine": {
+          "status": "PASS",
+          "duration_seconds": 0.669826
+        },
+        "PDF Examples.Redaction.Screenshot Regions Are Opaque Black": {
+          "status": "PASS",
+          "duration_seconds": 0.012484
+        },
+        "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer": {
+          "status": "PASS",
+          "duration_seconds": 0.182187
+        },
+        "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference": {
+          "status": "PASS",
+          "duration_seconds": 0.06852
+        },
+        "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields": {
+          "status": "PASS",
+          "duration_seconds": 0.017889
+        },
+        "PDF Examples.Text Comparison.Additional Blank Page Is A Difference": {
+          "status": "PASS",
+          "duration_seconds": 0.011437
+        },
+        "PDF Examples.Text Comparison.Excluded Page Does Not Affect Equality": {
+          "status": "PASS",
+          "duration_seconds": 0.010013
+        },
+        "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page": {
+          "status": "PASS",
+          "duration_seconds": 0.016309
+        },
+        "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison": {
+          "status": "PASS",
+          "duration_seconds": 0.02714
+        },
+        "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics": {
+          "status": "PASS",
+          "duration_seconds": 0.018705
+        },
+        "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison": {
+          "status": "PASS",
+          "duration_seconds": 0.028552
+        },
+        "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly": {
+          "status": "PASS",
+          "duration_seconds": 0.012895
+        }
+      }
     }
   ],
-  "run_number": 54
+  "run_number": 59
 }

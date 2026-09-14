@@ -1,0 +1,59 @@
+{
+  "id": "additional-blank-page-fails-visual-comparison-2cfe4782",
+  "name": "Additional Blank Page Fails Visual Comparison",
+  "full_name": "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A missing page is reported even when its pixel canvas would be blank.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Zwei PDFs mit gezielt unterschiedlicher Seitenanzahl bereitstellen.\n\n4. Fehlende Originalseite als erwarteten Fehler festlegen, auch wenn deren Bildinhalt vollst\u00e4ndig leer ist.",
+  "duration_seconds": 0.026,
+  "comparison": {
+    "equal": false,
+    "difference_count": 1,
+    "affected_pages": [
+      2
+    ],
+    "pages_compared": [
+      1,
+      2
+    ],
+    "limit_reached": false,
+    "differences": [
+      {
+        "page": 2,
+        "score": 0,
+        "reason": "missing_page",
+        "artifacts": {
+          "expected": "page_2_expected.png",
+          "actual": "page_2_actual.png",
+          "diff": "page_2_diff.png"
+        }
+      }
+    ]
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected.pdf",
+    "page_2_actual.png",
+    "page_2_diff.png",
+    "page_2_expected.png"
+  ]
+}

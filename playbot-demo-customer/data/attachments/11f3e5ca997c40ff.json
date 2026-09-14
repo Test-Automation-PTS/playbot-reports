@@ -1,0 +1,47 @@
+{
+  "id": "configured-page-and-text-masks-ignore-dynamic-fields-f202f864",
+  "name": "Configured Page And Text Masks Ignore Dynamic Fields",
+  "full_name": "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields",
+  "category": "Text",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf",
+    "mask": "mask.json"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The same documents pass when explicitly configured dynamic fields are masked.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Dynamische Kundenfelder und zul\u00e4ssige Seiten-/Textmasken anhand realer Dokumente bestimmen.\n\n4. PDFs w\u00e4hlen, die ausschlie\u00dflich in diesen erlaubten Bereichen abweichen; Maskenformat und Seitenbezug pr\u00fcfen.",
+  "duration_seconds": 0.015,
+  "comparison": {
+    "equal": true,
+    "difference_count": 0,
+    "affected_pages": [],
+    "pages_compared": [
+      1
+    ],
+    "limit_reached": false,
+    "differences": {}
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff.html",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf",
+    "mask.json"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "redacted-pdf-has-no-original-text-layer-17207847",
+  "name": "Redacted PDF Has No Original Text Layer",
+  "full_name": "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer",
+  "category": "Redaction",
+  "inputs": {
+    "expected": "expected.pdf",
+    "mask": "mask.json"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "redacted": [
+      "redacted-page-1.png",
+      "redacted-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a raster PDF and verify the original searchable text is absent. Preview the output in the dashboard.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Visual-/Reporting-Runtime und beschreibbare Eingabe-/Ausgabepfade f\u00fcr die Schw\u00e4rzung bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Kunden-PDF mit nachweisbarer Textebene und passende Schw\u00e4rzungsregionen bereitstellen.\n\n4. Festlegen, ob gerasterte Ausgabe ohne urspr\u00fcngliche Textebene f\u00fcr diesen Pr\u00fcfzweck gew\u00fcnscht ist.",
+  "duration_seconds": 0.17,
+  "comparison": null,
+  "files": [
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf",
+    "mask.json",
+    "redacted-page-1.png",
+    "redacted-page-2.png",
+    "redacted.pdf"
+  ]
+}

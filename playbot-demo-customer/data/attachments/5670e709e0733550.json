@@ -1,0 +1,51 @@
+{
+  "id": "additional-blank-page-is-a-difference-144d529e",
+  "name": "Additional Blank Page Is A Difference",
+  "full_name": "PDF Examples.Text Comparison.Additional Blank Page Is A Difference",
+  "category": "Text",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A second blank page is still a structural difference; detecting it is the expected outcome.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Zwei PDFs mit identischem Inhalt, aber genau einer zus\u00e4tzlichen leeren Originalseite vorbereiten.\n\n4. Die tats\u00e4chlich zus\u00e4tzliche Seitennummer als erwarteten Strukturfehler festlegen; Seite 2 ist hier das Beispiel.",
+  "duration_seconds": 0.009,
+  "comparison": {
+    "equal": false,
+    "difference_count": 1,
+    "affected_pages": [
+      2
+    ],
+    "pages_compared": [
+      1,
+      2
+    ],
+    "limit_reached": false,
+    "differences": {
+      "2": {
+        "expected": null,
+        "actual": ""
+      }
+    }
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff.html",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected.pdf"
+  ]
+}

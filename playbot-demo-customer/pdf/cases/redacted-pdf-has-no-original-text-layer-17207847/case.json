@@ -20,8 +20,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a raster PDF and verify the original searchable text is absent. Preview the output in the dashboard.",
-  "duration_seconds": 0.214464,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a raster PDF and verify the original searchable text is absent. Preview the output in the dashboard.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Visual-/Reporting-Runtime und beschreibbare Eingabe-/Ausgabepfade f\u00fcr die Schw\u00e4rzung bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Kunden-PDF mit nachweisbarer Textebene und passende Schw\u00e4rzungsregionen bereitstellen.\n\n4. Festlegen, ob gerasterte Ausgabe ohne urspr\u00fcngliche Textebene f\u00fcr diesen Pr\u00fcfzweck gew\u00fcnscht ist.",
+  "duration_seconds": 0.182187,
   "comparison": null,
   "files": [
     "expected-page-1.png",
@@ -38,7 +38,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000944,
+      "duration_seconds": 0.000685,
       "arguments": [
         "Redaction"
       ],
@@ -54,7 +54,7 @@
       "name": "Log",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000366,
+      "duration_seconds": 0.000238,
       "arguments": [
         "Steps and expected result: Export a raster PDF and verify the original searchable text is absent. Preview the output in the dashboard."
       ],
@@ -70,7 +70,7 @@
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.037404,
+      "duration_seconds": 0.033208,
       "arguments": [
         "${DATA}/expected.pdf",
         "mask=${DATA}/redaction.json"
@@ -82,7 +82,7 @@
       "name": "Redact PDF",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.045265,
+      "duration_seconds": 0.039026,
       "arguments": [
         "${DATA}/expected.pdf",
         "${PDF_OUTPUT}/redacted.pdf",
@@ -100,7 +100,7 @@
       "name": "Evaluate",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.110336,
+      "duration_seconds": 0.094923,
       "arguments": [
         "__import__('pypdf').PdfReader($output).pages[0].extract_text()"
       ],
@@ -116,7 +116,7 @@
       "name": "Should Be Empty",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000561,
+      "duration_seconds": 0.000438,
       "arguments": [
         "${text}"
       ],
@@ -132,13 +132,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.016325,
+      "duration_seconds": 0.011507,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-14T10:41:00.314448",
+  "started_at": "2026-09-14T13:09:47.837329",
   "mask_config": [
     {
       "page_numbers": [
@@ -180,6 +180,12 @@
       "duration_seconds": 0.214464,
       "run_number": 54,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#redacted-pdf-has-no-original-text-layer-17207847"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.182187,
+      "run_number": 59,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#redacted-pdf-has-no-original-text-layer-17207847"
     }
   ]
 }

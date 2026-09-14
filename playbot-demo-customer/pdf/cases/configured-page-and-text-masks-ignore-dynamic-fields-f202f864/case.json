@@ -21,8 +21,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The same documents pass when explicitly configured dynamic fields are masked.",
-  "duration_seconds": 0.024569,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The same documents pass when explicitly configured dynamic fields are masked.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Dynamische Kundenfelder und zul\u00e4ssige Seiten-/Textmasken anhand realer Dokumente bestimmen.\n\n4. PDFs w\u00e4hlen, die ausschlie\u00dflich in diesen erlaubten Bereichen abweichen; Maskenformat und Seitenbezug pr\u00fcfen.",
+  "duration_seconds": 0.017889,
   "comparison": {
     "equal": true,
     "difference_count": 0,
@@ -50,7 +50,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000978,
+      "duration_seconds": 0.000732,
       "arguments": [
         "Text"
       ],
@@ -66,7 +66,7 @@
       "name": "Log",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.00028,
+      "duration_seconds": 0.000247,
       "arguments": [
         "Steps and expected result: The same documents pass when explicitly configured dynamic fields are masked."
       ],
@@ -82,7 +82,7 @@
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.010146,
+      "duration_seconds": 0.007798,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf",
@@ -95,7 +95,7 @@
       "name": "PDF Texts Should Be Equal",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.008216,
+      "duration_seconds": 0.005933,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf",
@@ -109,13 +109,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.002804,
+      "duration_seconds": 0.001448,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-14T10:41:00.638938",
+  "started_at": "2026-09-14T13:09:48.104941",
   "mask_config": {
     "compare_pages": "1",
     "masks": [
@@ -165,6 +165,12 @@
       "duration_seconds": 0.024569,
       "run_number": 54,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.017889,
+      "run_number": 59,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
     }
   ]
 }

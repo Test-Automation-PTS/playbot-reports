@@ -1,0 +1,36 @@
+{
+  "id": "malformed-masks-fail-clearly-cdc07bc3",
+  "name": "Malformed Masks Fail Clearly",
+  "full_name": "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {
+    "invalid_area": "110 percent"
+  },
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Eine g\u00fcltige Kunden-Maskenkonfiguration kopieren und kontrolliert eine Prozentkoordinate au\u00dferhalb 0 bis 100 setzen.\n\n4. Die Konfigurationsablehnung erwarten; dieser Fall trifft keine Aussage \u00fcber Dokumentgleichheit.",
+  "duration_seconds": 0.011,
+  "comparison": null,
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf"
+  ]
+}
