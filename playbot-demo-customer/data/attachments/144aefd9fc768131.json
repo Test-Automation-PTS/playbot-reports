@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "path": "/status",
+  "request_body": null,
+  "status": 200,
+  "content_type": "application/json",
+  "response_body": "{\"status\":\"pending\"}"
+}

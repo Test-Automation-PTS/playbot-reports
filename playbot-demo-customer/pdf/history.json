@@ -242,5 +242,66 @@
         "duration_seconds": 0.01592
       }
     }
+  },
+  {
+    "run_key": "34834043676-1",
+    "run_number": 54,
+    "generated_at": "2026-09-14T10:41:14+00:00",
+    "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/",
+    "counts": {
+      "PASS": 12,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "tests": {
+      "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine": {
+        "status": "PASS",
+        "duration_seconds": 0.875864
+      },
+      "PDF Examples.Redaction.Screenshot Regions Are Opaque Black": {
+        "status": "PASS",
+        "duration_seconds": 0.01528
+      },
+      "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer": {
+        "status": "PASS",
+        "duration_seconds": 0.214464
+      },
+      "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.086497
+      },
+      "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields": {
+        "status": "PASS",
+        "duration_seconds": 0.024569
+      },
+      "PDF Examples.Text Comparison.Additional Blank Page Is A Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.016101
+      },
+      "PDF Examples.Text Comparison.Excluded Page Does Not Affect Equality": {
+        "status": "PASS",
+        "duration_seconds": 0.014405
+      },
+      "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page": {
+        "status": "PASS",
+        "duration_seconds": 0.023516
+      },
+      "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.03688
+      },
+      "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics": {
+        "status": "PASS",
+        "duration_seconds": 0.023217
+      },
+      "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.039191
+      },
+      "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly": {
+        "status": "PASS",
+        "duration_seconds": 0.018174
+      }
+    }
   }
 ]

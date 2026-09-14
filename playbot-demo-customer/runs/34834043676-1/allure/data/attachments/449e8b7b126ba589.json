@@ -1,0 +1,22 @@
+{
+  "id": "screenshot-regions-are-opaque-black-5ca193da",
+  "name": "Screenshot Regions Are Opaque Black",
+  "full_name": "PDF Examples.Redaction.Screenshot Regions Are Opaque Black",
+  "category": "Redaction",
+  "inputs": {
+    "expected": "expected.png",
+    "mask": "mask.json"
+  },
+  "previews": {},
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a PNG with an opaque black region and inspect a pixel inside that region.",
+  "duration_seconds": 0.012,
+  "comparison": null,
+  "files": [
+    "expected.png",
+    "mask.json",
+    "redacted.png"
+  ]
+}

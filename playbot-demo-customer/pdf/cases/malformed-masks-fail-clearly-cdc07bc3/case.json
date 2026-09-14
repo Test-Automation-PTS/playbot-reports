@@ -22,8 +22,8 @@
   },
   "status": "PASS",
   "message": "",
-  "documentation": "Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced.",
-  "duration_seconds": 0.01592,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced.",
+  "duration_seconds": 0.018174,
   "comparison": null,
   "files": [
     "actual-page-1.png",
@@ -39,7 +39,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000916,
+      "duration_seconds": 0.001064,
       "arguments": [
         "Visual"
       ],
@@ -52,10 +52,26 @@
       "steps": []
     },
     {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000303,
+      "arguments": [
+        "Steps and expected result: Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: Coordinates outside 0\u2013100 percent are rejected before comparison; no equality claim is produced."
+        }
+      ],
+      "steps": []
+    },
+    {
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.009326,
+      "duration_seconds": 0.009926,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf",
@@ -68,7 +84,7 @@
       "name": "Evaluate",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000413,
+      "duration_seconds": 0.000386,
       "arguments": [
         "[{\"area_masks\":[\"[TOP-RIGHT: 110%, 10%]\"]}]"
       ],
@@ -84,7 +100,7 @@
       "name": "Run Keyword And Expect Error",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.001832,
+      "duration_seconds": 0.001919,
       "arguments": [
         "*area coordinates*",
         "Compare Pdfs",
@@ -99,7 +115,7 @@
           "name": "Compare Pdfs",
           "kind": "KEYWORD",
           "status": "FAIL",
-          "duration_seconds": 0.001102,
+          "duration_seconds": 0.001024,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf",
@@ -120,13 +136,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.001417,
+      "duration_seconds": 0.002174,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-11T09:04:41.336653",
+  "started_at": "2026-09-14T10:41:00.837710",
   "evidence_missing": false,
   "history": [
     {
@@ -152,6 +168,12 @@
       "duration_seconds": 0.01592,
       "run_number": 48,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#malformed-masks-fail-clearly-cdc07bc3"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.018174,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#malformed-masks-fail-clearly-cdc07bc3"
     }
   ]
 }

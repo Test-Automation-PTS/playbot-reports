@@ -18,8 +18,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "A red rectangle becomes blue while text stays identical. Expect a pixel difference.",
-  "duration_seconds": 0.035088,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A red rectangle becomes blue while text stays identical. Expect a pixel difference.",
+  "duration_seconds": 0.03688,
   "comparison": {
     "equal": false,
     "difference_count": 1,
@@ -59,7 +59,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000895,
+      "duration_seconds": 0.000955,
       "arguments": [
         "Visual"
       ],
@@ -72,10 +72,26 @@
       "steps": []
     },
     {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000261,
+      "arguments": [
+        "Steps and expected result: A red rectangle becomes blue while text stays identical. Expect a pixel difference."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: A red rectangle becomes blue while text stays identical. Expect a pixel difference."
+        }
+      ],
+      "steps": []
+    },
+    {
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.004337,
+      "duration_seconds": 0.004612,
       "arguments": [
         "${DATA}/graphic-red.pdf",
         "${DATA}/graphic-blue.pdf"
@@ -87,7 +103,7 @@
       "name": "Run Keyword And Expect Error",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.025486,
+      "duration_seconds": 0.025762,
       "arguments": [
         "PDFs differ visually*",
         "PDFs Should Be Visually Equal",
@@ -101,7 +117,7 @@
           "name": "PDFs Should Be Visually Equal",
           "kind": "KEYWORD",
           "status": "FAIL",
-          "duration_seconds": 0.024672,
+          "duration_seconds": 0.025025,
           "arguments": [
             "${DATA}/graphic-red.pdf",
             "${DATA}/graphic-blue.pdf",
@@ -121,7 +137,7 @@
       "name": "File Should Exist",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000286,
+      "duration_seconds": 0.000281,
       "arguments": [
         "${PDF_OUTPUT}/page_1_diff.png"
       ],
@@ -137,13 +153,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.002131,
+      "duration_seconds": 0.002597,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-11T09:04:41.234368",
+  "started_at": "2026-09-14T10:41:00.732006",
   "evidence_missing": false,
   "history": [
     {
@@ -169,6 +185,12 @@
       "duration_seconds": 0.035088,
       "run_number": 48,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#graphic-color-changes-fail-visual-comparison-355893fc"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.03688,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#graphic-color-changes-fail-visual-comparison-355893fc"
     }
   ]
 }

@@ -19,8 +19,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "A missing page is reported even when its pixel canvas would be blank.",
-  "duration_seconds": 0.037914,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A missing page is reported even when its pixel canvas would be blank.",
+  "duration_seconds": 0.039191,
   "comparison": {
     "equal": false,
     "difference_count": 1,
@@ -62,7 +62,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000945,
+      "duration_seconds": 0.000981,
       "arguments": [
         "Visual"
       ],
@@ -75,10 +75,26 @@
       "steps": []
     },
     {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000291,
+      "arguments": [
+        "Steps and expected result: A missing page is reported even when its pixel canvas would be blank."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: A missing page is reported even when its pixel canvas would be blank."
+        }
+      ],
+      "steps": []
+    },
+    {
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.005389,
+      "duration_seconds": 0.005445,
       "arguments": [
         "${DATA}/one-page.pdf",
         "${DATA}/two-pages.pdf"
@@ -90,7 +106,7 @@
       "name": "Run Keyword And Expect Error",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.028064,
+      "duration_seconds": 0.02747,
       "arguments": [
         "PDFs differ visually on pages: 2*",
         "PDFs Should Be Visually Equal",
@@ -104,7 +120,7 @@
           "name": "PDFs Should Be Visually Equal",
           "kind": "KEYWORD",
           "status": "FAIL",
-          "duration_seconds": 0.026936,
+          "duration_seconds": 0.026692,
           "arguments": [
             "${DATA}/one-page.pdf",
             "${DATA}/two-pages.pdf",
@@ -124,13 +140,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.001855,
+      "duration_seconds": 0.002744,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-11T09:04:41.296829",
+  "started_at": "2026-09-14T10:41:00.796394",
   "evidence_missing": false,
   "history": [
     {
@@ -156,6 +172,12 @@
       "duration_seconds": 0.037914,
       "run_number": 48,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.039191,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
     }
   ]
 }

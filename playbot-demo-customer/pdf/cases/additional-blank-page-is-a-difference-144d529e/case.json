@@ -19,8 +19,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "A second blank page is still a structural difference; detecting it is the expected outcome.",
-  "duration_seconds": 0.014221,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A second blank page is still a structural difference; detecting it is the expected outcome.",
+  "duration_seconds": 0.016101,
   "comparison": {
     "equal": false,
     "difference_count": 1,
@@ -54,7 +54,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.001051,
+      "duration_seconds": 0.001007,
       "arguments": [
         "Text"
       ],
@@ -67,10 +67,26 @@
       "steps": []
     },
     {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000285,
+      "arguments": [
+        "Steps and expected result: A second blank page is still a structural difference; detecting it is the expected outcome."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: A second blank page is still a structural difference; detecting it is the expected outcome."
+        }
+      ],
+      "steps": []
+    },
+    {
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.005619,
+      "duration_seconds": 0.006074,
       "arguments": [
         "${DATA}/one-page.pdf",
         "${DATA}/two-pages.pdf"
@@ -82,7 +98,7 @@
       "name": "Run Keyword And Expect Error",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.003657,
+      "duration_seconds": 0.00407,
       "arguments": [
         "PDF texts differ on pages: 2",
         "PDF Texts Should Be Equal",
@@ -96,7 +112,7 @@
           "name": "PDF Texts Should Be Equal",
           "kind": "KEYWORD",
           "status": "FAIL",
-          "duration_seconds": 0.00285,
+          "duration_seconds": 0.003369,
           "arguments": [
             "${DATA}/one-page.pdf",
             "${DATA}/two-pages.pdf",
@@ -116,7 +132,7 @@
       "name": "File Should Exist",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000468,
+      "duration_seconds": 0.000226,
       "arguments": [
         "${PDF_OUTPUT}/diff_result.json"
       ],
@@ -132,13 +148,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.001553,
+      "duration_seconds": 0.002234,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-11T09:04:41.177529",
+  "started_at": "2026-09-14T10:41:00.665604",
   "evidence_missing": false,
   "history": [
     {
@@ -164,6 +180,12 @@
       "duration_seconds": 0.014221,
       "run_number": 48,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#additional-blank-page-is-a-difference-144d529e"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.016101,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#additional-blank-page-is-a-difference-144d529e"
     }
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "method": "POST",
+  "path": "/orders",
+  "request_body": "{\"product\": \"Workshop\"}",
+  "status": 201,
+  "content_type": "application/json",
+  "response_body": "{\"id\": 43, \"product\": \"Workshop\", \"status\": \"created\"}"
+}

@@ -21,8 +21,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "Translation preserves mask compatibility; candidate and reference still have unmasked differences.",
-  "duration_seconds": 1.045841,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Translation preserves mask compatibility; candidate and reference still have unmasked differences.",
+  "duration_seconds": 0.875864,
   "comparison": {
     "equal": false,
     "difference_count": 2,
@@ -80,7 +80,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.00115,
+      "duration_seconds": 0.001233,
       "arguments": [
         "Visual"
       ],
@@ -93,10 +93,26 @@
       "steps": []
     },
     {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000326,
+      "arguments": [
+        "Steps and expected result: Translation preserves mask compatibility; candidate and reference still have unmasked differences."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: Translation preserves mask compatibility; candidate and reference still have unmasked differences."
+        }
+      ],
+      "steps": []
+    },
+    {
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.178921,
+      "duration_seconds": 0.179722,
       "arguments": [
         "${DATA}/Candidate.pdf",
         "${DATA}/Reference.pdf",
@@ -109,7 +125,7 @@
       "name": "Translate Config File For Visual Comparison",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.001835,
+      "duration_seconds": 0.001844,
       "arguments": [
         "${DATA}/visual_mask_conf.json",
         "${PDF_OUTPUT}"
@@ -126,7 +142,7 @@
       "name": "Compare Pdfs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.85225,
+      "duration_seconds": 0.677918,
       "arguments": [
         "${DATA}/Candidate.pdf",
         "${DATA}/Reference.pdf",
@@ -145,7 +161,7 @@
       "name": "Should Not Be Empty",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000542,
+      "duration_seconds": 0.000584,
       "arguments": [
         "${diffs}"
       ],
@@ -161,13 +177,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.007665,
+      "duration_seconds": 0.009095,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-11T09:04:39.790752",
+  "started_at": "2026-09-14T10:40:59.414316",
   "mask_config": [
     {
       "type": "word_pattern",
@@ -235,6 +251,12 @@
       "duration_seconds": 1.045841,
       "run_number": 48,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.875864,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
     }
   ]
 }

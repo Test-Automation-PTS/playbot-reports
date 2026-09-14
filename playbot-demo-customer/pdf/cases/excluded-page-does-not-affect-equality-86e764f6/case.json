@@ -21,8 +21,8 @@
   },
   "status": "PASS",
   "message": "",
-  "documentation": "Compare the same unequal page counts, explicitly excluding original page 2.",
-  "duration_seconds": 0.011738,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Compare the same unequal page counts, explicitly excluding original page 2.",
+  "duration_seconds": 0.014405,
   "comparison": {
     "equal": true,
     "difference_count": 0,
@@ -48,7 +48,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000956,
+      "duration_seconds": 0.000931,
       "arguments": [
         "Text"
       ],
@@ -61,10 +61,26 @@
       "steps": []
     },
     {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000265,
+      "arguments": [
+        "Steps and expected result: Compare the same unequal page counts, explicitly excluding original page 2."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: Compare the same unequal page counts, explicitly excluding original page 2."
+        }
+      ],
+      "steps": []
+    },
+    {
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.005137,
+      "duration_seconds": 0.005866,
       "arguments": [
         "${DATA}/one-page.pdf",
         "${DATA}/two-pages.pdf",
@@ -77,7 +93,7 @@
       "name": "PDF Texts Should Be Equal",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.002457,
+      "duration_seconds": 0.002909,
       "arguments": [
         "${DATA}/one-page.pdf",
         "${DATA}/two-pages.pdf",
@@ -91,13 +107,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.001667,
+      "duration_seconds": 0.002457,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-11T09:04:41.193524",
+  "started_at": "2026-09-14T10:41:00.683698",
   "evidence_missing": false,
   "history": [
     {
@@ -123,6 +139,12 @@
       "duration_seconds": 0.011738,
       "run_number": 48,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#excluded-page-does-not-affect-equality-86e764f6"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.014405,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#excluded-page-does-not-affect-equality-86e764f6"
     }
   ]
 }

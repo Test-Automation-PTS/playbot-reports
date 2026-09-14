@@ -20,8 +20,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "The name and date differ. Catch the expected failure and show the HTML/JSON evidence.",
-  "duration_seconds": 0.077272,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The name and date differ. Catch the expected failure and show the HTML/JSON evidence.",
+  "duration_seconds": 0.086497,
   "comparison": {
     "equal": false,
     "difference_count": 2,
@@ -61,7 +61,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.001023,
+      "duration_seconds": 0.000887,
       "arguments": [
         "Text"
       ],
@@ -74,10 +74,26 @@
       "steps": []
     },
     {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000269,
+      "arguments": [
+        "Steps and expected result: The name and date differ. Catch the expected failure and show the HTML/JSON evidence."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: The name and date differ. Catch the expected failure and show the HTML/JSON evidence."
+        }
+      ],
+      "steps": []
+    },
+    {
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.010009,
+      "duration_seconds": 0.01089,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf"
@@ -89,7 +105,7 @@
       "name": "Run Keyword And Expect Error",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.061931,
+      "duration_seconds": 0.068887,
       "arguments": [
         "PDF texts differ on pages:*",
         "PDF Texts Should Be Equal",
@@ -103,7 +119,7 @@
           "name": "PDF Texts Should Be Equal",
           "kind": "KEYWORD",
           "status": "FAIL",
-          "duration_seconds": 0.060928,
+          "duration_seconds": 0.06799,
           "arguments": [
             "${DATA}/expected.pdf",
             "${DATA}/actual.pdf",
@@ -123,7 +139,7 @@
       "name": "File Should Exist",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000394,
+      "duration_seconds": 0.00038,
       "arguments": [
         "${PDF_OUTPUT}/diff.html"
       ],
@@ -139,13 +155,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.00175,
+      "duration_seconds": 0.002661,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-11T09:04:41.074875",
+  "started_at": "2026-09-14T10:41:00.550336",
   "evidence_missing": false,
   "history": [
     {
@@ -171,6 +187,12 @@
       "duration_seconds": 0.077272,
       "run_number": 48,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#changed-text-produces-a-readable-difference-abd1ab89"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.086497,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#changed-text-produces-a-readable-difference-abd1ab89"
     }
   ]
 }

@@ -21,8 +21,8 @@
   "settings": {},
   "status": "PASS",
   "message": "",
-  "documentation": "The same documents pass when explicitly configured dynamic fields are masked.",
-  "duration_seconds": 0.021777,
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: The same documents pass when explicitly configured dynamic fields are masked.",
+  "duration_seconds": 0.024569,
   "comparison": {
     "equal": true,
     "difference_count": 0,
@@ -50,7 +50,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000945,
+      "duration_seconds": 0.000978,
       "arguments": [
         "Text"
       ],
@@ -63,10 +63,26 @@
       "steps": []
     },
     {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.00028,
+      "arguments": [
+        "Steps and expected result: The same documents pass when explicitly configured dynamic fields are masked."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: The same documents pass when explicitly configured dynamic fields are masked."
+        }
+      ],
+      "steps": []
+    },
+    {
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.009624,
+      "duration_seconds": 0.010146,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf",
@@ -79,7 +95,7 @@
       "name": "PDF Texts Should Be Equal",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.007521,
+      "duration_seconds": 0.008216,
       "arguments": [
         "${DATA}/expected.pdf",
         "${DATA}/actual.pdf",
@@ -93,13 +109,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.001975,
+      "duration_seconds": 0.002804,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-11T09:04:41.153952",
+  "started_at": "2026-09-14T10:41:00.638938",
   "mask_config": {
     "compare_pages": "1",
     "masks": [
@@ -143,6 +159,12 @@
       "duration_seconds": 0.021777,
       "run_number": 48,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.024569,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#configured-page-and-text-masks-ignore-dynamic-fields-f202f864"
     }
   ]
 }
