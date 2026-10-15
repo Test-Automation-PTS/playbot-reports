@@ -1,0 +1,274 @@
+{
+  "id": "translated-legacy-masks-work-with-the-visual-engine-7a5c37ed",
+  "name": "Translated Legacy Masks Work With The Visual Engine",
+  "full_name": "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf",
+    "mask": "mask.json"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png",
+      "expected-page-2.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Translation preserves mask compatibility; candidate and reference still have unmasked differences.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Visual-/Reporting-Runtime und die vorhandene Legacy-Maskenkonfiguration f\u00fcr die \u00dcbersetzung bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Vorhandene Legacy-Maskendatei des Kunden und dazu passende Vergleichsbelege bereitstellen.\n\n4. \u00dcbersetzte Masken an bekannten Regionen pr\u00fcfen und f\u00fcr diesen Negativfall mindestens eine unmaskierte Abweichung erhalten.",
+  "duration_seconds": 0.971772,
+  "comparison": {
+    "equal": false,
+    "difference_count": 2,
+    "affected_pages": [
+      1,
+      2
+    ],
+    "pages_compared": [
+      1,
+      2
+    ],
+    "limit_reached": false,
+    "differences": [
+      {
+        "page": 1,
+        "score": 10520,
+        "reason": "pixels_changed",
+        "artifacts": {
+          "expected": "page_1_expected.png",
+          "actual": "page_1_actual.png",
+          "diff": "page_1_diff.png"
+        }
+      },
+      {
+        "page": 2,
+        "score": 71393,
+        "reason": "pixels_changed",
+        "artifacts": {
+          "expected": "page_2_expected.png",
+          "actual": "page_2_actual.png",
+          "diff": "page_2_diff.png"
+        }
+      }
+    ]
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected-page-2.png",
+    "expected.pdf",
+    "mask.json",
+    "page_1_actual.png",
+    "page_1_diff.png",
+    "page_1_expected.png",
+    "page_2_actual.png",
+    "page_2_diff.png",
+    "page_2_expected.png"
+  ],
+  "suite": "PDF Examples.Mask Translation",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.001186,
+      "arguments": [
+        "Visual"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000337,
+      "arguments": [
+        "Steps and expected result: Translation preserves mask compatibility; candidate and reference still have unmasked differences."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: Translation preserves mask compatibility; candidate and reference still have unmasked differences."
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.164947,
+      "arguments": [
+        "${DATA}/Candidate.pdf",
+        "${DATA}/Reference.pdf",
+        "mask=${DATA}/visual_mask_conf.json"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Translate Config File For Visual Comparison",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.001861,
+      "arguments": [
+        "${DATA}/visual_mask_conf.json",
+        "${PDF_OUTPUT}"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${config} = /workspace/reports/pdf/pdf-artifacts/translated-legacy-masks-work-with-the-visual-engine-7a5c37ed/mask.json"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Compare Pdfs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.789179,
+      "arguments": [
+        "${DATA}/Candidate.pdf",
+        "${DATA}/Reference.pdf",
+        "${config}",
+        "${PDF_OUTPUT}"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${diffs} = [{'page': 1, 'score': 10520, 'reason': 'pixels_changed', 'artifacts': {'expected': 'page_1_expected.png', 'actual': 'page_1_actual.png', 'diff': 'page_1_diff.png'}}, {'page': 2, 'score': 71393, 'reaso..."
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Should Not Be Empty",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.000586,
+      "arguments": [
+        "${diffs}"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Length is 2."
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.008639,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-10-15T16:46:23.290985",
+  "mask_config": [
+    {
+      "type": "word_pattern",
+      "page": "1",
+      "pattern": "(?:(?:[$\u20ac\u00a3]|PLN|USD|EUR|GBP|z\u0142)\\s?\\d+(?:[.,]\\d+)*|\\d+(?:[.,]\\d+)*\\s?(?:[$\u20ac\u00a3]|PLN|USD|EUR|GBP|z\u0142))"
+    },
+    {
+      "type": "word_pattern",
+      "page": "2",
+      "pattern": "(?:(?:[$\u20ac\u00a3]|PLN|USD|EUR|GBP|z\u0142)\\s?\\d+(?:[.,]\\d+)*|\\d+(?:[.,]\\d+)*\\s?(?:[$\u20ac\u00a3]|PLN|USD|EUR|GBP|z\u0142))"
+    },
+    {
+      "type": "word_pattern",
+      "page": "1",
+      "pattern": "Document"
+    },
+    {
+      "type": "word_pattern",
+      "page": "2",
+      "pattern": "Document"
+    },
+    {
+      "type": "word_pattern",
+      "page": "1",
+      "pattern": "Policy\\w+"
+    },
+    {
+      "type": "word_pattern",
+      "page": "2",
+      "pattern": "Policy\\w+"
+    },
+    {
+      "type": "word_pattern",
+      "page": "2",
+      "pattern": "grace\\ period"
+    },
+    {
+      "type": "word_pattern",
+      "page": "2",
+      "pattern": "poli\\w+"
+    }
+  ],
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.808558,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.813962,
+      "run_number": 40,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497330497-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.805205,
+      "run_number": 43,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34514339872-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 1.045841,
+      "run_number": 48,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.875864,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.669826,
+      "run_number": 59,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.971772,
+      "run_number": 67,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/38771222987-1/pdf/#translated-legacy-masks-work-with-the-visual-engine-7a5c37ed"
+    }
+  ]
+}

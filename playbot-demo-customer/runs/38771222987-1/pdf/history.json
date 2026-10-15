@@ -1,0 +1,429 @@
+[
+  {
+    "run_key": "34497294725-1",
+    "run_number": 39,
+    "generated_at": "2026-09-10T15:43:29+00:00",
+    "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/",
+    "counts": {
+      "PASS": 12,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "tests": {
+      "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine": {
+        "status": "PASS",
+        "duration_seconds": 0.808558
+      },
+      "PDF Examples.Redaction.Screenshot Regions Are Opaque Black": {
+        "status": "PASS",
+        "duration_seconds": 0.009741
+      },
+      "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer": {
+        "status": "PASS",
+        "duration_seconds": 0.10554
+      },
+      "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.0538
+      },
+      "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields": {
+        "status": "PASS",
+        "duration_seconds": 0.019203
+      },
+      "PDF Examples.Text Comparison.Additional Blank Page Is A Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.013262
+      },
+      "PDF Examples.Text Comparison.Excluded Page Does Not Affect Equality": {
+        "status": "PASS",
+        "duration_seconds": 0.010888
+      },
+      "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page": {
+        "status": "PASS",
+        "duration_seconds": 0.018806
+      },
+      "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.031568
+      },
+      "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics": {
+        "status": "PASS",
+        "duration_seconds": 0.019887
+      },
+      "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.034923
+      },
+      "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly": {
+        "status": "PASS",
+        "duration_seconds": 0.015089
+      }
+    }
+  },
+  {
+    "run_key": "34497330497-1",
+    "run_number": 40,
+    "generated_at": "2026-09-10T15:46:06+00:00",
+    "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497330497-1/pdf/",
+    "counts": {
+      "PASS": 12,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "tests": {
+      "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine": {
+        "status": "PASS",
+        "duration_seconds": 0.813962
+      },
+      "PDF Examples.Redaction.Screenshot Regions Are Opaque Black": {
+        "status": "PASS",
+        "duration_seconds": 0.011851
+      },
+      "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer": {
+        "status": "PASS",
+        "duration_seconds": 0.126568
+      },
+      "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.062803
+      },
+      "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields": {
+        "status": "PASS",
+        "duration_seconds": 0.023116
+      },
+      "PDF Examples.Text Comparison.Additional Blank Page Is A Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.0164
+      },
+      "PDF Examples.Text Comparison.Excluded Page Does Not Affect Equality": {
+        "status": "PASS",
+        "duration_seconds": 0.013549
+      },
+      "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page": {
+        "status": "PASS",
+        "duration_seconds": 0.022414
+      },
+      "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.035375
+      },
+      "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics": {
+        "status": "PASS",
+        "duration_seconds": 0.021863
+      },
+      "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.038324
+      },
+      "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly": {
+        "status": "PASS",
+        "duration_seconds": 0.017085
+      }
+    }
+  },
+  {
+    "run_key": "34514339872-1",
+    "run_number": 43,
+    "generated_at": "2026-09-10T18:28:57+00:00",
+    "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34514339872-1/pdf/",
+    "counts": {
+      "PASS": 12,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "tests": {
+      "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine": {
+        "status": "PASS",
+        "duration_seconds": 0.805205
+      },
+      "PDF Examples.Redaction.Screenshot Regions Are Opaque Black": {
+        "status": "PASS",
+        "duration_seconds": 0.011235
+      },
+      "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer": {
+        "status": "PASS",
+        "duration_seconds": 0.125139
+      },
+      "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.064388
+      },
+      "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields": {
+        "status": "PASS",
+        "duration_seconds": 0.024256
+      },
+      "PDF Examples.Text Comparison.Additional Blank Page Is A Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.015309
+      },
+      "PDF Examples.Text Comparison.Excluded Page Does Not Affect Equality": {
+        "status": "PASS",
+        "duration_seconds": 0.013014
+      },
+      "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page": {
+        "status": "PASS",
+        "duration_seconds": 0.022366
+      },
+      "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.035195
+      },
+      "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics": {
+        "status": "PASS",
+        "duration_seconds": 0.02288
+      },
+      "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.038577
+      },
+      "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly": {
+        "status": "PASS",
+        "duration_seconds": 0.016955
+      }
+    }
+  },
+  {
+    "run_key": "34582000121-1",
+    "run_number": 48,
+    "generated_at": "2026-09-11T09:04:53+00:00",
+    "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/",
+    "counts": {
+      "PASS": 12,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "tests": {
+      "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine": {
+        "status": "PASS",
+        "duration_seconds": 1.045841
+      },
+      "PDF Examples.Redaction.Screenshot Regions Are Opaque Black": {
+        "status": "PASS",
+        "duration_seconds": 0.013796
+      },
+      "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer": {
+        "status": "PASS",
+        "duration_seconds": 0.197442
+      },
+      "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.077272
+      },
+      "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields": {
+        "status": "PASS",
+        "duration_seconds": 0.021777
+      },
+      "PDF Examples.Text Comparison.Additional Blank Page Is A Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.014221
+      },
+      "PDF Examples.Text Comparison.Excluded Page Does Not Affect Equality": {
+        "status": "PASS",
+        "duration_seconds": 0.011738
+      },
+      "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page": {
+        "status": "PASS",
+        "duration_seconds": 0.020395
+      },
+      "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.035088
+      },
+      "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics": {
+        "status": "PASS",
+        "duration_seconds": 0.022988
+      },
+      "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.037914
+      },
+      "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly": {
+        "status": "PASS",
+        "duration_seconds": 0.01592
+      }
+    }
+  },
+  {
+    "run_key": "34834043676-1",
+    "run_number": 54,
+    "generated_at": "2026-09-14T10:41:14+00:00",
+    "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/",
+    "counts": {
+      "PASS": 12,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "tests": {
+      "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine": {
+        "status": "PASS",
+        "duration_seconds": 0.875864
+      },
+      "PDF Examples.Redaction.Screenshot Regions Are Opaque Black": {
+        "status": "PASS",
+        "duration_seconds": 0.01528
+      },
+      "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer": {
+        "status": "PASS",
+        "duration_seconds": 0.214464
+      },
+      "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.086497
+      },
+      "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields": {
+        "status": "PASS",
+        "duration_seconds": 0.024569
+      },
+      "PDF Examples.Text Comparison.Additional Blank Page Is A Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.016101
+      },
+      "PDF Examples.Text Comparison.Excluded Page Does Not Affect Equality": {
+        "status": "PASS",
+        "duration_seconds": 0.014405
+      },
+      "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page": {
+        "status": "PASS",
+        "duration_seconds": 0.023516
+      },
+      "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.03688
+      },
+      "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics": {
+        "status": "PASS",
+        "duration_seconds": 0.023217
+      },
+      "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.039191
+      },
+      "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly": {
+        "status": "PASS",
+        "duration_seconds": 0.018174
+      }
+    }
+  },
+  {
+    "run_key": "34847012198-1",
+    "run_number": 59,
+    "generated_at": "2026-09-14T13:09:59+00:00",
+    "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/",
+    "counts": {
+      "PASS": 12,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "tests": {
+      "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine": {
+        "status": "PASS",
+        "duration_seconds": 0.669826
+      },
+      "PDF Examples.Redaction.Screenshot Regions Are Opaque Black": {
+        "status": "PASS",
+        "duration_seconds": 0.012484
+      },
+      "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer": {
+        "status": "PASS",
+        "duration_seconds": 0.182187
+      },
+      "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.06852
+      },
+      "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields": {
+        "status": "PASS",
+        "duration_seconds": 0.017889
+      },
+      "PDF Examples.Text Comparison.Additional Blank Page Is A Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.011437
+      },
+      "PDF Examples.Text Comparison.Excluded Page Does Not Affect Equality": {
+        "status": "PASS",
+        "duration_seconds": 0.010013
+      },
+      "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page": {
+        "status": "PASS",
+        "duration_seconds": 0.016309
+      },
+      "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.02714
+      },
+      "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics": {
+        "status": "PASS",
+        "duration_seconds": 0.018705
+      },
+      "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.028552
+      },
+      "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly": {
+        "status": "PASS",
+        "duration_seconds": 0.012895
+      }
+    }
+  },
+  {
+    "run_key": "38771222987-1",
+    "run_number": 67,
+    "generated_at": "2026-10-15T16:46:37+00:00",
+    "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/38771222987-1/pdf/",
+    "counts": {
+      "PASS": 12,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "tests": {
+      "PDF Examples.Mask Translation.Translated Legacy Masks Work With The Visual Engine": {
+        "status": "PASS",
+        "duration_seconds": 0.971772
+      },
+      "PDF Examples.Redaction.Screenshot Regions Are Opaque Black": {
+        "status": "PASS",
+        "duration_seconds": 0.015003
+      },
+      "PDF Examples.Redaction.Redacted PDF Has No Original Text Layer": {
+        "status": "PASS",
+        "duration_seconds": 0.196772
+      },
+      "PDF Examples.Text Comparison.Changed Text Produces A Readable Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.083187
+      },
+      "PDF Examples.Text Comparison.Configured Page And Text Masks Ignore Dynamic Fields": {
+        "status": "PASS",
+        "duration_seconds": 0.023255
+      },
+      "PDF Examples.Text Comparison.Additional Blank Page Is A Difference": {
+        "status": "PASS",
+        "duration_seconds": 0.014663
+      },
+      "PDF Examples.Text Comparison.Excluded Page Does Not Affect Equality": {
+        "status": "PASS",
+        "duration_seconds": 0.012937
+      },
+      "PDF Examples.Text Comparison.Difference Limit Stops After One Affected Page": {
+        "status": "PASS",
+        "duration_seconds": 0.022347
+      },
+      "PDF Examples.Visual Comparison.Graphic Color Changes Fail Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.033572
+      },
+      "PDF Examples.Visual Comparison.Configured Masks Ignore Dynamic Text And Graphics": {
+        "status": "PASS",
+        "duration_seconds": 0.02261
+      },
+      "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison": {
+        "status": "PASS",
+        "duration_seconds": 0.035328
+      },
+      "PDF Examples.Visual Comparison.Malformed Masks Fail Clearly": {
+        "status": "PASS",
+        "duration_seconds": 0.01746
+      }
+    }
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "method": "POST",
+  "path": "/xml/orders",
+  "request_body": "<GetOrder><id>42</id></GetOrder>",
+  "status": 200,
+  "content_type": "application/xml",
+  "response_body": "<order><id>42</id><status>ready</status></order>"
+}

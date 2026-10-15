@@ -1,0 +1,195 @@
+{
+  "id": "additional-blank-page-fails-visual-comparison-2cfe4782",
+  "name": "Additional Blank Page Fails Visual Comparison",
+  "full_name": "PDF Examples.Visual Comparison.Additional Blank Page Fails Visual Comparison",
+  "category": "Visual",
+  "inputs": {
+    "expected": "expected.pdf",
+    "actual": "actual.pdf"
+  },
+  "previews": {
+    "expected": [
+      "expected-page-1.png"
+    ],
+    "actual": [
+      "actual-page-1.png",
+      "actual-page-2.png"
+    ]
+  },
+  "settings": {},
+  "status": "PASS",
+  "message": "",
+  "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A missing page is reported even when its pixel canvas would be blank.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Zwei PDFs mit gezielt unterschiedlicher Seitenanzahl bereitstellen.\n\n4. Fehlende Originalseite als erwarteten Fehler festlegen, auch wenn deren Bildinhalt vollst\u00e4ndig leer ist.",
+  "duration_seconds": 0.035328,
+  "comparison": {
+    "equal": false,
+    "difference_count": 1,
+    "affected_pages": [
+      2
+    ],
+    "pages_compared": [
+      1,
+      2
+    ],
+    "limit_reached": false,
+    "differences": [
+      {
+        "page": 2,
+        "score": 0,
+        "reason": "missing_page",
+        "artifacts": {
+          "expected": "page_2_expected.png",
+          "actual": "page_2_actual.png",
+          "diff": "page_2_diff.png"
+        }
+      }
+    ]
+  },
+  "files": [
+    "actual-page-1.png",
+    "actual-page-2.png",
+    "actual.pdf",
+    "diff_result.json",
+    "expected-page-1.png",
+    "expected.pdf",
+    "page_2_actual.png",
+    "page_2_diff.png",
+    "page_2_expected.png"
+  ],
+  "suite": "PDF Examples.Visual Comparison",
+  "steps": [
+    {
+      "name": "Prepare Pdf Evidence",
+      "kind": "SETUP",
+      "status": "PASS",
+      "duration_seconds": 0.001069,
+      "arguments": [
+        "Visual"
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "${PDF_OUTPUT} = /workspace/reports/pdf/pdf-artifacts/additional-blank-page-fails-visual-comparison-2cfe4782"
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Log",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.0003,
+      "arguments": [
+        "Steps and expected result: A missing page is reported even when its pixel canvas would be blank."
+      ],
+      "messages": [
+        {
+          "level": "INFO",
+          "text": "Steps and expected result: A missing page is reported even when its pixel canvas would be blank."
+        }
+      ],
+      "steps": []
+    },
+    {
+      "name": "Pdf Inputs",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.004849,
+      "arguments": [
+        "${DATA}/one-page.pdf",
+        "${DATA}/two-pages.pdf"
+      ],
+      "messages": [],
+      "steps": []
+    },
+    {
+      "name": "Run Keyword And Expect Error",
+      "kind": "KEYWORD",
+      "status": "PASS",
+      "duration_seconds": 0.024462,
+      "arguments": [
+        "PDFs differ visually on pages: 2*",
+        "PDFs Should Be Visually Equal",
+        "${DATA}/one-page.pdf",
+        "${DATA}/two-pages.pdf",
+        "output_dir=${PDF_OUTPUT}"
+      ],
+      "messages": [],
+      "steps": [
+        {
+          "name": "PDFs Should Be Visually Equal",
+          "kind": "KEYWORD",
+          "status": "FAIL",
+          "duration_seconds": 0.023682,
+          "arguments": [
+            "${DATA}/one-page.pdf",
+            "${DATA}/two-pages.pdf",
+            "output_dir=${PDF_OUTPUT}"
+          ],
+          "messages": [
+            {
+              "level": "FAIL",
+              "text": "PDFs differ visually on pages: 2; artifacts: /workspace/reports/pdf/pdf-artifacts/additional-blank-page-fails-visual-comparison-2cfe4782"
+            }
+          ],
+          "steps": []
+        }
+      ]
+    },
+    {
+      "name": "Finish Pdf Evidence",
+      "kind": "TEARDOWN",
+      "status": "PASS",
+      "duration_seconds": 0.002652,
+      "arguments": [],
+      "messages": [],
+      "steps": []
+    }
+  ],
+  "started_at": "2026-10-15T16:46:24.734583",
+  "evidence_missing": false,
+  "history": [
+    {
+      "status": "PASS",
+      "duration_seconds": 0.034923,
+      "run_number": 39,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497294725-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.038324,
+      "run_number": 40,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34497330497-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.038577,
+      "run_number": 43,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34514339872-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.037914,
+      "run_number": 48,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34582000121-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.039191,
+      "run_number": 54,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34834043676-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.028552,
+      "run_number": 59,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.035328,
+      "run_number": 67,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/38771222987-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+    }
+  ]
+}

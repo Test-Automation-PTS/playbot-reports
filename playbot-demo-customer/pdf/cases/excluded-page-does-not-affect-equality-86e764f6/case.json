@@ -22,7 +22,7 @@
   "status": "PASS",
   "message": "",
   "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Compare the same unequal page counts, explicitly excluding original page 2.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Eine fachlich ausdr\u00fccklich ausgeschlossene Originalseite und zwei sonst passende Belege bereitstellen.\n\n4. Dieselbe Seitenauswahl in Evidence und Vergleich \u00fcbergeben; die \u00fcbrigen Seiten m\u00fcssen weiter pr\u00fcfbar bleiben.",
-  "duration_seconds": 0.010013,
+  "duration_seconds": 0.012937,
   "comparison": {
     "equal": true,
     "difference_count": 0,
@@ -48,7 +48,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000691,
+      "duration_seconds": 0.000829,
       "arguments": [
         "Text"
       ],
@@ -64,7 +64,7 @@
       "name": "Log",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000228,
+      "duration_seconds": 0.00028,
       "arguments": [
         "Steps and expected result: Compare the same unequal page counts, explicitly excluding original page 2."
       ],
@@ -80,7 +80,7 @@
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.004208,
+      "duration_seconds": 0.005204,
       "arguments": [
         "${DATA}/one-page.pdf",
         "${DATA}/two-pages.pdf",
@@ -93,7 +93,7 @@
       "name": "PDF Texts Should Be Equal",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.001977,
+      "duration_seconds": 0.002745,
       "arguments": [
         "${DATA}/one-page.pdf",
         "${DATA}/two-pages.pdf",
@@ -107,13 +107,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.001185,
+      "duration_seconds": 0.002081,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-14T13:09:48.137552",
+  "started_at": "2026-10-15T16:46:24.630007",
   "evidence_missing": false,
   "history": [
     {
@@ -151,6 +151,12 @@
       "duration_seconds": 0.010013,
       "run_number": 59,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#excluded-page-does-not-affect-equality-86e764f6"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.012937,
+      "run_number": 67,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/38771222987-1/pdf/#excluded-page-does-not-affect-equality-86e764f6"
     }
   ]
 }

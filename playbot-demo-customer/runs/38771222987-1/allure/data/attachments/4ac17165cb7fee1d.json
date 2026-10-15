@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "path": "/orders/42",
+  "request_body": null,
+  "status": 200,
+  "content_type": "application/json",
+  "response_body": "{\"id\": 42, \"status\": \"ready\", \"amount\": \"49.90\", \"traceId\": \"generated-demo-trace\"}"
+}

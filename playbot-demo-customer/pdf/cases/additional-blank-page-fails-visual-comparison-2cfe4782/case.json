@@ -20,7 +20,7 @@
   "status": "PASS",
   "message": "",
   "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: A missing page is reported even when its pixel canvas would be blank.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Runtime sowie freigegebenen Referenzbeleg und unabh\u00e4ngigen Ist-Beleg mit passenden Dateipfaden bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Zwei PDFs mit gezielt unterschiedlicher Seitenanzahl bereitstellen.\n\n4. Fehlende Originalseite als erwarteten Fehler festlegen, auch wenn deren Bildinhalt vollst\u00e4ndig leer ist.",
-  "duration_seconds": 0.028552,
+  "duration_seconds": 0.035328,
   "comparison": {
     "equal": false,
     "difference_count": 1,
@@ -62,7 +62,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000669,
+      "duration_seconds": 0.001069,
       "arguments": [
         "Visual"
       ],
@@ -78,7 +78,7 @@
       "name": "Log",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000211,
+      "duration_seconds": 0.0003,
       "arguments": [
         "Steps and expected result: A missing page is reported even when its pixel canvas would be blank."
       ],
@@ -94,7 +94,7 @@
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.003834,
+      "duration_seconds": 0.004849,
       "arguments": [
         "${DATA}/one-page.pdf",
         "${DATA}/two-pages.pdf"
@@ -106,7 +106,7 @@
       "name": "Run Keyword And Expect Error",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.020781,
+      "duration_seconds": 0.024462,
       "arguments": [
         "PDFs differ visually on pages: 2*",
         "PDFs Should Be Visually Equal",
@@ -120,7 +120,7 @@
           "name": "PDFs Should Be Visually Equal",
           "kind": "KEYWORD",
           "status": "FAIL",
-          "duration_seconds": 0.02021,
+          "duration_seconds": 0.023682,
           "arguments": [
             "${DATA}/one-page.pdf",
             "${DATA}/two-pages.pdf",
@@ -140,13 +140,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.0015,
+      "duration_seconds": 0.002652,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-14T13:09:48.219867",
+  "started_at": "2026-10-15T16:46:24.734583",
   "evidence_missing": false,
   "history": [
     {
@@ -184,6 +184,12 @@
       "duration_seconds": 0.028552,
       "run_number": 59,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.035328,
+      "run_number": 67,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/38771222987-1/pdf/#additional-blank-page-fails-visual-comparison-2cfe4782"
     }
   ]
 }

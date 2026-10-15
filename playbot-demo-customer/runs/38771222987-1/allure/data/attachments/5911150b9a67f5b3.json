@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "path": "/orders/42",
+  "request_body": null,
+  "status": 401,
+  "content_type": "application/json",
+  "response_body": "{\"error\": \"unauthorized\"}"
+}

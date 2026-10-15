@@ -12,7 +12,7 @@
   "status": "PASS",
   "message": "",
   "documentation": "Prerequisites: Use the approved Playbot runtime with PDF modules and the versioned robot/data fixtures. Test setup creates a separate evidence directory; teardown attaches the comparison evidence.\nSteps and expected result: Export a PNG with an opaque black region and inspect a pixel inside that region.\n\n\nKundenvorbereitung (siehe robot/tests/pdf/README.md):\n\n1. PDF-Visual-/Reporting-Runtime und beschreibbare Eingabe-/Ausgabepfade f\u00fcr die Schw\u00e4rzung bereitstellen.\n\n2. Beschreibbares Evidence-Verzeichnis und passende Aufbewahrung der Kundendokumente festlegen; Demo-Masken nicht ungepr\u00fcft \u00fcbernehmen.\n\n3. Kundenbild, tats\u00e4chliche Schw\u00e4rzungsmaske und neue Ausgabedatei bestimmen.\n\n4. Einen Pr\u00fcfpunkt innerhalb der eigenen Region w\u00e4hlen; (25,25) und RGB (0,0,0) geh\u00f6ren zum Demo-Nachweis.",
-  "duration_seconds": 0.012484,
+  "duration_seconds": 0.015003,
   "comparison": null,
   "files": [
     "expected.png",
@@ -25,7 +25,7 @@
       "name": "Prepare Pdf Evidence",
       "kind": "SETUP",
       "status": "PASS",
-      "duration_seconds": 0.000758,
+      "duration_seconds": 0.000924,
       "arguments": [
         "Redaction"
       ],
@@ -41,7 +41,7 @@
       "name": "Log",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000283,
+      "duration_seconds": 0.000272,
       "arguments": [
         "Steps and expected result: Export a PNG with an opaque black region and inspect a pixel inside that region."
       ],
@@ -57,7 +57,7 @@
       "name": "Pdf Inputs",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000823,
+      "duration_seconds": 0.000901,
       "arguments": [
         "${DATA}/screenshot.png",
         "mask=${DATA}/screenshot-mask.json"
@@ -69,7 +69,7 @@
       "name": "Redact Image",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.006455,
+      "duration_seconds": 0.007495,
       "arguments": [
         "${DATA}/screenshot.png",
         "${PDF_OUTPUT}/redacted.png",
@@ -87,7 +87,7 @@
       "name": "Evaluate",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.000675,
+      "duration_seconds": 0.000813,
       "arguments": [
         "__import__('PIL.Image', fromlist=['open']).open($output).getpixel((25,25))"
       ],
@@ -103,7 +103,7 @@
       "name": "Should Be Equal",
       "kind": "KEYWORD",
       "status": "PASS",
-      "duration_seconds": 0.00047,
+      "duration_seconds": 0.000537,
       "arguments": [
         "${pixel}",
         "${{(0,0,0)}}"
@@ -115,13 +115,13 @@
       "name": "Finish Pdf Evidence",
       "kind": "TEARDOWN",
       "status": "PASS",
-      "duration_seconds": 0.000994,
+      "duration_seconds": 0.001575,
       "arguments": [],
       "messages": [],
       "steps": []
     }
   ],
-  "started_at": "2026-09-14T13:09:47.823294",
+  "started_at": "2026-10-15T16:46:24.269817",
   "mask_config": [
     {
       "area_masks": [
@@ -166,6 +166,12 @@
       "duration_seconds": 0.012484,
       "run_number": 59,
       "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/34847012198-1/pdf/#screenshot-regions-are-opaque-black-5ca193da"
+    },
+    {
+      "status": "PASS",
+      "duration_seconds": 0.015003,
+      "run_number": 67,
+      "url": "https://test-automation-pts.github.io/playbot-demo-reports/runs/38771222987-1/pdf/#screenshot-regions-are-opaque-black-5ca193da"
     }
   ]
 }

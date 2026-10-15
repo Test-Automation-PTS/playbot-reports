@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "path": "/orders/42.xml",
+  "request_body": null,
+  "status": 200,
+  "content_type": "application/xml",
+  "response_body": "<order currency=\"EUR\"><id>42</id><status>ready</status><traceId>generated-demo-trace</traceId></order>"
+}

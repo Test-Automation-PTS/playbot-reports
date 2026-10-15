@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "path": "/api/bookings/WB-1001",
+  "request_body": null,
+  "status": 200,
+  "content_type": "application/json",
+  "response_body": "{\"id\": \"WB-1001\", \"participant\": \"alice\", \"workshop\": \"API Testing\", \"note\": \"Bring a laptop\", \"status\": \"confirmed\", \"amount\": 49.9}"
+}

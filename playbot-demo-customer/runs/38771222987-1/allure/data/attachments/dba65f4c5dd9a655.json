@@ -1,0 +1,8 @@
+{
+  "method": "POST",
+  "path": "/orders",
+  "request_body": "{\"quantity\": 1}",
+  "status": 422,
+  "content_type": "application/json",
+  "response_body": "{\"error\": \"product_required\"}"
+}
